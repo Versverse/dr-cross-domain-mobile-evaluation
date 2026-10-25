@@ -1,0 +1,237 @@
+{
+  "created": "2026-10-16",
+  "role": "Canonical common threshold identity for statistical tables, conversion and Android comparisons",
+  "thresholds": {
+    "efficientnet_lite0": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.5422741621732711,
+      "source_sens_95": 0.286680217621324,
+      "source_sens_98": 0.07715187933445117,
+      "source_sens_99": 0.0260117471480042
+    },
+    "mobilenetv3_large": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.7014254357563914,
+      "source_sens_95": 0.4053929056390188,
+      "source_sens_98": 0.24814162035181644,
+      "source_sens_99": 0.0727574325792373
+    },
+    "mobilevit_s": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.5398757969960569,
+      "source_sens_95": 0.38024454819969816,
+      "source_sens_98": 0.2537982107605784,
+      "source_sens_99": 0.13782322197221203
+    },
+    "resnet50": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.6041934192180632,
+      "source_sens_95": 0.4620040687732397,
+      "source_sens_98": 0.3251692637859377,
+      "source_sens_99": 0.2814733376726506
+    }
+  },
+  "comparison_rule": "referable risk >= full precision threshold",
+  "selection_rule": "Largest retained APTOS positive probability sum meeting source empirical sensitivity target; include all tied boundary scores; no external tuning",
+  "numeric_definition": {
+    "csv_parser": "pandas.read_csv default float parser",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5",
+    "risk": "float64 DataFrame[[prob_2,prob_3,prob_4]].sum(axis=1)",
+    "serialization": "JSON native double repr; per-image CSV risk uses Python repr(float(value)); consumers must retain double precision and must not round display values"
+  },
+  "retained_prediction_inputs": [
+    {
+      "filename": "aptos_val_all_predictions_combined.csv",
+      "sha256": "2134ffa79e5c3766100780abb1694f49e64b73bfbd01d77dddbc16d66f2cf8cb"
+    },
+    {
+      "filename": "messidor2_all_predictions_combined.csv",
+      "sha256": "1e8a209c5aa4922a781ddfc8574f376a926968929aa59fa4ee4f59c026e94c4c"
+    }
+  ],
+  "source_operating_counts": [
+    {
+      "model": "EfficientNet-Lite0",
+      "target_APTOS_sensitivity": 0.9,
+      "full_precision_threshold": 0.5422741621732711,
+      "TP": 269,
+      "FP": 23,
+      "FN": 29,
+      "TN": 412,
+      "sensitivity": 0.9026845637583892,
+      "specificity": 0.9471264367816092
+    },
+    {
+      "model": "EfficientNet-Lite0",
+      "target_APTOS_sensitivity": 0.95,
+      "full_precision_threshold": 0.286680217621324,
+      "TP": 284,
+      "FP": 44,
+      "FN": 14,
+      "TN": 391,
+      "sensitivity": 0.9530201342281879,
+      "specificity": 0.8988505747126436
+    },
+    {
+      "model": "EfficientNet-Lite0",
+      "target_APTOS_sensitivity": 0.98,
+      "full_precision_threshold": 0.07715187933445117,
+      "TP": 293,
+      "FP": 89,
+      "FN": 5,
+      "TN": 346,
+      "sensitivity": 0.9832214765100671,
+      "specificity": 0.7954022988505747
+    },
+    {
+      "model": "EfficientNet-Lite0",
+      "target_APTOS_sensitivity": 0.99,
+      "full_precision_threshold": 0.0260117471480042,
+      "TP": 296,
+      "FP": 117,
+      "FN": 2,
+      "TN": 318,
+      "sensitivity": 0.9932885906040269,
+      "specificity": 0.7310344827586207
+    },
+    {
+      "model": "MobileNetV3-Large",
+      "target_APTOS_sensitivity": 0.9,
+      "full_precision_threshold": 0.7014254357563914,
+      "TP": 269,
+      "FP": 24,
+      "FN": 29,
+      "TN": 411,
+      "sensitivity": 0.9026845637583892,
+      "specificity": 0.9448275862068966
+    },
+    {
+      "model": "MobileNetV3-Large",
+      "target_APTOS_sensitivity": 0.95,
+      "full_precision_threshold": 0.4053929056390188,
+      "TP": 284,
+      "FP": 35,
+      "FN": 14,
+      "TN": 400,
+      "sensitivity": 0.9530201342281879,
+      "specificity": 0.9195402298850575
+    },
+    {
+      "model": "MobileNetV3-Large",
+      "target_APTOS_sensitivity": 0.98,
+      "full_precision_threshold": 0.24814162035181644,
+      "TP": 293,
+      "FP": 46,
+      "FN": 5,
+      "TN": 389,
+      "sensitivity": 0.9832214765100671,
+      "specificity": 0.8942528735632184
+    },
+    {
+      "model": "MobileNetV3-Large",
+      "target_APTOS_sensitivity": 0.99,
+      "full_precision_threshold": 0.0727574325792373,
+      "TP": 297,
+      "FP": 57,
+      "FN": 1,
+      "TN": 378,
+      "sensitivity": 0.9966442953020134,
+      "specificity": 0.8689655172413793
+    },
+    {
+      "model": "MobileViT-S",
+      "target_APTOS_sensitivity": 0.9,
+      "full_precision_threshold": 0.5398757969960569,
+      "TP": 269,
+      "FP": 19,
+      "FN": 29,
+      "TN": 416,
+      "sensitivity": 0.9026845637583892,
+      "specificity": 0.9563218390804598
+    },
+    {
+      "model": "MobileViT-S",
+      "target_APTOS_sensitivity": 0.95,
+      "full_precision_threshold": 0.38024454819969816,
+      "TP": 284,
+      "FP": 32,
+      "FN": 14,
+      "TN": 403,
+      "sensitivity": 0.9530201342281879,
+      "specificity": 0.9264367816091954
+    },
+    {
+      "model": "MobileViT-S",
+      "target_APTOS_sensitivity": 0.98,
+      "full_precision_threshold": 0.2537982107605784,
+      "TP": 293,
+      "FP": 38,
+      "FN": 5,
+      "TN": 397,
+      "sensitivity": 0.9832214765100671,
+      "specificity": 0.9126436781609195
+    },
+    {
+      "model": "MobileViT-S",
+      "target_APTOS_sensitivity": 0.99,
+      "full_precision_threshold": 0.13782322197221203,
+      "TP": 296,
+      "FP": 56,
+      "FN": 2,
+      "TN": 379,
+      "sensitivity": 0.9932885906040269,
+      "specificity": 0.871264367816092
+    },
+    {
+      "model": "ResNet-50",
+      "target_APTOS_sensitivity": 0.9,
+      "full_precision_threshold": 0.6041934192180632,
+      "TP": 269,
+      "FP": 24,
+      "FN": 29,
+      "TN": 411,
+      "sensitivity": 0.9026845637583892,
+      "specificity": 0.9448275862068966
+    },
+    {
+      "model": "ResNet-50",
+      "target_APTOS_sensitivity": 0.95,
+      "full_precision_threshold": 0.4620040687732397,
+      "TP": 284,
+      "FP": 35,
+      "FN": 14,
+      "TN": 400,
+      "sensitivity": 0.9530201342281879,
+      "specificity": 0.9195402298850575
+    },
+    {
+      "model": "ResNet-50",
+      "target_APTOS_sensitivity": 0.98,
+      "full_precision_threshold": 0.3251692637859377,
+      "TP": 293,
+      "FP": 43,
+      "FN": 5,
+      "TN": 392,
+      "sensitivity": 0.9832214765100671,
+      "specificity": 0.9011494252873563
+    },
+    {
+      "model": "ResNet-50",
+      "target_APTOS_sensitivity": 0.99,
+      "full_precision_threshold": 0.2814733376726506,
+      "TP": 296,
+      "FP": 50,
+      "FN": 2,
+      "TN": 385,
+      "sensitivity": 0.9932885906040269,
+      "specificity": 0.8850574712643678
+    }
+  ],
+  "canonical_risk_csv": {
+    "filename": "canonical_retained_risks_20261016.csv",
+    "rows": 9908,
+    "sha256": "318d36ed7670ce8a0b2f5de5cb875a68579db10e8c58d1286c064c87e6471a03"
+  },
+  "status": "Frozen after independent scalar recount and before final runtime decision aggregation. New logits may be assessed against these thresholds without rerunning inference."
+}

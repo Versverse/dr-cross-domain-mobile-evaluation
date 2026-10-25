@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "analysis_date": "2026-10-19",
+  "scope": "APTOS Table 2 six-metric intervals and Table 5 fixed-threshold sensitivity/specificity intervals; no training, inference, new threshold selection, or source-file changes.",
+  "historical_program_search": {
+    "status": "Not recovered",
+    "searched": [
+      "original APTOS_retest.ipynb",
+      "original Downloads Python/notebook files by bootstrap/resample/percentile/RNG keywords",
+      "original 新数据汇总 Python/notebook files",
+      "existing paper work/package scripts"
+    ],
+    "finding": "Original training/evaluation notebook contains point-metric calculations, not the Table 2 source bootstrap implementation. Later calibration/bootstrap scripts and external paired-examination calculations exist but do not restore the exact original source Table 2 and Table 5 interval stream.",
+    "analysis_action": "Explicitly documented 2026-10-19 recomputation from unchanged retained predictions. Seed 42 fixed before computation; no search for matching historical rounded endpoints."
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "unit": "image",
+    "sample_size": 733,
+    "with_replacement": true,
+    "rng": "numpy.random.Generator(PCG64)",
+    "seed": 42,
+    "reset": "at start of each model",
+    "order": "original retained combined prediction CSV order per model",
+    "shared_draws": "same sampled indices used for all six metrics and four fixed-threshold operating points",
+    "ci": "2.5 and 97.5 percentiles; numpy.percentile(method=\"linear\")",
+    "invalid_replicates": 0,
+    "stratified": false
+  },
+  "metric_definitions": {
+    "grading": "five-class argmax",
+    "macro_f1": "unweighted mean over the fixed five grades; zero denominator returns zero",
+    "qwk": "five-grade quadratic-weighted Cohen kappa",
+    "Table2_binary_decision": "five-class argmax grades 2-4 positive (not a 0.5 risk threshold)",
+    "AUC": "rank AUC for canonical sum of probabilities grades 2-4; ties have half credit",
+    "Table5_binary_decision": "canonical referable risk >= frozen full-precision MobileViT-S threshold"
+  },
+  "point_estimates_and_thresholds_unchanged": true,
+  "external_intervals_unchanged": true,
+  "source_cell_updates": 32,
+  "changed_cells": 32,
+  "independent_verification": [
+    {
+      "model": "EfficientNet-Lite0",
+      "n": 733,
+      "referable_n": 298,
+      "nonreferable_n": 435,
+      "max_independent_metric_absolute_error": 2.220446049250313e-16,
+      "independent_all_2000_operating_draws_exact": true,
+      "six_point_display_values_unchanged": true
+    },
+    {
+      "model": "MobileNetV3-Large",
+      "n": 733,
+      "referable_n": 298,
+      "nonreferable_n": 435,
+      "max_independent_metric_absolute_error": 2.220446049250313e-16,
+      "independent_all_2000_operating_draws_exact": true,
+      "six_point_display_values_unchanged": true
+    },
+    {
+      "model": "MobileViT-S",
+      "n": 733,
+      "referable_n": 298,
+      "nonreferable_n": 435,
+      "max_independent_metric_absolute_error": 2.220446049250313e-16,
+      "independent_all_2000_operating_draws_exact": true,
+      "six_point_display_values_unchanged": true
+    },
+    {
+      "model": "ResNet-50",
+      "n": 733,
+      "referable_n": 298,
+      "nonreferable_n": 435,
+      "max_independent_metric_absolute_error": 2.220446049250313e-16,
+      "independent_all_2000_operating_draws_exact": true,
+      "six_point_display_values_unchanged": true
+    }
+  ],
+  "runtime": {
+    "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "input_sha256": {
+    "aptos_source_predictions.csv": "960630f4972ac7d9b4bb7ee76372e2fc12c155a65bc6a484c75a8189513d4874",
+    "canonical_source_risks.csv": "fef686ebe20945b3f5cdb35e8e2488dc5578a288e0899650dae37b8159f6c907",
+    "frozen_thresholds_20261016.json": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894",
+    "baseline_tables.json": "c4ac255452b3d3c2311f71c507c79a1e2511a69f397b03551cad7c5ce9c5b5b9",
+    "source_provenance.json": "30538ed01f2d335a2fbca5310d251e9f1e146291d0f42c91916f3b9efb24dff6"
+  },
+  "script_sha256": "e29e7d791c12bb723f332f09b05c80bf68e7ca5d99ead999a4de13c440e8bb8d",
+  "seconds": 6.5168860999983735,
+  "output_sha256": {
+    "APTOS_image_draw_indices_seed42.npy": "d3bb831d4a1008758ac58b9a70f34b932e79f47bd8d8b8bd2ccbeeb15d129343",
+    "APTOS_image_order.csv": "3142e8428fe8bb7fad5ec6078a7643020ed21c3a7dc972110addad08e8e11a7b",
+    "efficientnet_lite0_source_bootstrap_draws.csv": "315f27bfe54ab3d1547feed0af0a1a20d92c96d8eaa9461fc16ffb4f1663fdd9",
+    "frozen_threshold_source_counts.csv": "71df8243a2dcdc5439ce367dc55fc06a48cf7ce45d26901109a470e4b8650b3a",
+    "mobilenetv3_large_source_bootstrap_draws.csv": "7996486f9fb7f6ee72ec9f7333ab95f4cd52763e01dfeff690ac04a4bf2f8d02",
+    "mobilevit_s_source_bootstrap_draws.csv": "05d27966b12e9a182673e0cd64ca49afd3bfb7827085ecac72257ddf50f27ad2",
+    "resnet50_source_bootstrap_draws.csv": "857f446730b4c27c1d46ca938fdd76b096ef0175db0905731f35989a7bf83287",
+    "source_intervals_recomputed.csv": "6a5fd6b67efeb1185ee454d6e22ec633f0f75e2af336c1dcc345706cc513bed0",
+    "source_point_estimates_verified.csv": "83a707c61a5db3316189d13b65bfa5ef70d7804b85ac371d48b79545a8e179cb",
+    "table_cell_updates.json": "049439e357ef76b00eb8db04a7951c74a4d7fc8eea74fa0b83bb834211f1412b"
+  }
+}

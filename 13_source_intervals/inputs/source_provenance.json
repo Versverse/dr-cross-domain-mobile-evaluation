@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-19",
+  "original_prediction_filename": "aptos_val_all_predictions_combined.csv",
+  "original_prediction_sha256": "2134ffa79e5c3766100780abb1694f49e64b73bfbd01d77dddbc16d66f2cf8cb",
+  "prepared_predictions": "All 2932 rows retained in their original order, every number copied as CSV text; image_path and redundant dataset columns removed.",
+  "canonical_risk_full_filename": "canonical_retained_risks_20261016.csv",
+  "canonical_risk_full_sha256": "318d36ed7670ce8a0b2f5de5cb875a68579db10e8c58d1286c064c87e6471a03",
+  "prepared_canonical_risks": "The 2932 APTOS rows selected in retained order; exact numeric text preserved.",
+  "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894",
+  "baseline_docx_sha256": "53229195fbcc94ad6b16c232d0e6209da38e26b48f0bba5c540e71193922cb13",
+  "historical_program_search": {
+    "status": "Not recovered",
+    "searched": [
+      "original APTOS_retest.ipynb",
+      "original Downloads Python/notebook files by bootstrap/resample/percentile/RNG keywords",
+      "original 新数据汇总 Python/notebook files",
+      "existing paper work/package scripts"
+    ],
+    "finding": "Original training/evaluation notebook contains point-metric calculations, not the Table 2 source bootstrap implementation. Later calibration/bootstrap scripts and external paired-examination calculations exist but do not restore the exact original source Table 2 and Table 5 interval stream.",
+    "analysis_action": "Explicitly documented 2026-10-19 recomputation from unchanged retained predictions. Seed 42 fixed before computation; no search for matching historical rounded endpoints."
+  },
+  "prepared_input_sha256": {
+    "aptos_source_predictions.csv": "960630f4972ac7d9b4bb7ee76372e2fc12c155a65bc6a484c75a8189513d4874",
+    "baseline_tables.json": "c4ac255452b3d3c2311f71c507c79a1e2511a69f397b03551cad7c5ce9c5b5b9",
+    "canonical_source_risks.csv": "fef686ebe20945b3f5cdb35e8e2488dc5578a288e0899650dae37b8159f6c907",
+    "frozen_thresholds_20261016.json": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894"
+  }
+}

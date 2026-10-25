@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "numerical_files_byte_identical_after_second_execution": {
+    "APTOS_image_draw_indices_seed42.npy": true,
+    "APTOS_image_order.csv": true,
+    "efficientnet_lite0_source_bootstrap_draws.csv": true,
+    "frozen_threshold_source_counts.csv": true,
+    "mobilenetv3_large_source_bootstrap_draws.csv": true,
+    "mobilevit_s_source_bootstrap_draws.csv": true,
+    "resnet50_source_bootstrap_draws.csv": true,
+    "source_intervals_recomputed.csv": true,
+    "source_point_estimates_verified.csv": true,
+    "table_cell_updates.json": true
+  },
+  "original_files": {
+    "baseline_clean_docx": {
+      "sha256": "53229195fbcc94ad6b16c232d0e6209da38e26b48f0bba5c540e71193922cb13",
+      "expected_sha256": "53229195fbcc94ad6b16c232d0e6209da38e26b48f0bba5c540e71193922cb13",
+      "unchanged": true
+    },
+    "baseline_review_docx": {
+      "sha256": "67fd989c5739c056ad3fa04562138c4bf72285e3851a730ff0198d0c2e9e10b7",
+      "expected_sha256": "67fd989c5739c056ad3fa04562138c4bf72285e3851a730ff0198d0c2e9e10b7",
+      "unchanged": true
+    },
+    "original_predictions_csv": {
+      "sha256": "2134ffa79e5c3766100780abb1694f49e64b73bfbd01d77dddbc16d66f2cf8cb",
+      "expected_sha256": "2134ffa79e5c3766100780abb1694f49e64b73bfbd01d77dddbc16d66f2cf8cb",
+      "unchanged": true
+    },
+    "canonical_risks_20261016": {
+      "sha256": "318d36ed7670ce8a0b2f5de5cb875a68579db10e8c58d1286c064c87e6471a03",
+      "expected_sha256": "318d36ed7670ce8a0b2f5de5cb875a68579db10e8c58d1286c064c87e6471a03",
+      "unchanged": true
+    },
+    "frozen_thresholds_20261016": {
+      "sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894",
+      "expected_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894",
+      "unchanged": true
+    }
+  }
+}

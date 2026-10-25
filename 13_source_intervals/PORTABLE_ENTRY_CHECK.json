@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "date": "2026-10-19",
+  "entry": "python run_source_intervals.py --output NEW_DIRECTORY",
+  "numerical_files_byte_identical_to_recorded_execution": {
+    "APTOS_image_draw_indices_seed42.npy": true,
+    "APTOS_image_order.csv": true,
+    "efficientnet_lite0_source_bootstrap_draws.csv": true,
+    "frozen_threshold_source_counts.csv": true,
+    "mobilenetv3_large_source_bootstrap_draws.csv": true,
+    "mobilevit_s_source_bootstrap_draws.csv": true,
+    "resnet50_source_bootstrap_draws.csv": true,
+    "source_intervals_recomputed.csv": true,
+    "source_point_estimates_verified.csv": true,
+    "table_cell_updates.json": true
+  },
+  "no_model_inference_or_training": true
+}
