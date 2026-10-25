@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DrDemo" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#14304E</item>
+        <item name="colorSecondary">#007074</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:statusBarColor">#F6F8FA</item>
+        <item name="android:navigationBarColor">#F6F8FA</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>
