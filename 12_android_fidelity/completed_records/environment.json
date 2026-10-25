@@ -1,0 +1,50 @@
+{
+  "record_type": "NEW_PAIRED_FIDELITY_20261016",
+  "application_implementation": "Independent native Java Activity; SDK tools build, no Gradle or AndroidX",
+  "manufacturer": "HUAWEI",
+  "model": "DBR-W00",
+  "hardware": "qcom",
+  "supported_abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "armeabi"
+  ],
+  "android_release": "12",
+  "sdk": 31,
+  "opencv": "4.10.0",
+  "opencv_runtime": "4.10.0",
+  "tflite_runtime": "2.16.1",
+  "threads": 4,
+  "xnnpack_requested": true,
+  "warmup_inferences_per_model": 5,
+  "input_manifest_sha256": "4da3680c51f2d39080046753248bb773a1eb5d707a4848dff58928a4eb07d56d",
+  "APK_sha256": "297adba97c725c397868d49c530c12ca7e3f8bf6e5e6225fb866d50393fbf2ee",
+  "package": "com.example.aptosedgetest.fidelity20261016",
+  "N_images": 218,
+  "preflight_before": {
+    "battery_percent": 100,
+    "battery_status_code": 2,
+    "charging_or_full": true,
+    "plugged_code": 2,
+    "battery_temperature_C": 25.8,
+    "power_save_mode": false,
+    "thermal_status": 0,
+    "debuggable_build": true,
+    "timing_role": "Diagnostic fidelity times only; never a formal performance benchmark."
+  },
+  "new_latency_role": "DIAGNOSTIC ONLY. Debug fidelity measurements; never replace July7 benchmark or end-to-end table.",
+  "fixed_tensor_contract": "Little-endian float32 NHWC RGB [0,1]; ImageNet normalization inside graph",
+  "raw_arm_contract": "BitmapFactory decode; original DrPipeline integer crop\/INTER_AREA\/LAB CLAHE; no offline JPEG re-encoding",
+  "encoding_matched_arm_contract": "Same raw processing, followed by default OpenCV JPEG encode\/decode for .jpg\/.jpeg only; PNG retains pixels. Device OpenCV decoder is recorded separately from the retained desktop PIL decoder. No equivalence assumed.",
+  "preflight_after": {
+    "battery_percent": 100,
+    "battery_status_code": 2,
+    "charging_or_full": true,
+    "plugged_code": 2,
+    "battery_temperature_C": 28.8,
+    "power_save_mode": false,
+    "thermal_status": 0,
+    "debuggable_build": true,
+    "timing_role": "Diagnostic fidelity times only; never a formal performance benchmark."
+  }
+}

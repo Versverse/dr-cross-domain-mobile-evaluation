@@ -1,0 +1,9 @@
+model,dataset,arm,N,identical_tensor_N,top1_changed_N,maximum_absolute_probability_difference,risk_0.5_changed_N,source_sens_90_changed_N,source_sens_95_changed_N,source_sens_98_changed_N,source_sens_99_changed_N
+efficientnet_lite0,APTOS,raw_pipeline,108,0,0,0.030847800445109763,1,0,0,0,1
+efficientnet_lite0,APTOS,raw_encoding_matched,108,0,0,0.030847800445109763,1,0,0,0,1
+efficientnet_lite0,MESSIDOR2,raw_pipeline,110,0,5,0.37152371744649587,3,2,4,5,5
+efficientnet_lite0,MESSIDOR2,raw_encoding_matched,110,0,1,0.05268497341275896,1,1,2,0,1
+mobilenetv3_large,APTOS,raw_pipeline,108,0,0,0.010036089173650314,0,1,0,0,2
+mobilenetv3_large,APTOS,raw_encoding_matched,108,0,0,0.010036089173650314,0,1,0,0,2
+mobilenetv3_large,MESSIDOR2,raw_pipeline,110,0,1,0.2091706306140551,0,1,0,1,4
+mobilenetv3_large,MESSIDOR2,raw_encoding_matched,110,0,0,0.02929205191049969,0,1,1,1,0

@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "scope": "Saved-output integrity and scalar arithmetic only; no inference.",
+  "expected_images": 218,
+  "expected_models": 2,
+  "expected_arms": 3,
+  "expected_records": 1308,
+  "arithmetic_absolute_tolerance": 2e-14,
+  "decision_rule": "risk >= exact full-precision threshold, without tolerance",
+  "models": {
+    "efficientnet_lite0": {
+      "record_count": 654,
+      "grade_domain_arm_counts": {
+        "APTOS/grade0/fixed_tensor": 20,
+        "APTOS/grade0/raw_encoding_matched": 20,
+        "APTOS/grade0/raw_pipeline": 20,
+        "APTOS/grade1/fixed_tensor": 20,
+        "APTOS/grade1/raw_encoding_matched": 20,
+        "APTOS/grade1/raw_pipeline": 20,
+        "APTOS/grade2/fixed_tensor": 26,
+        "APTOS/grade2/raw_encoding_matched": 26,
+        "APTOS/grade2/raw_pipeline": 26,
+        "APTOS/grade3/fixed_tensor": 20,
+        "APTOS/grade3/raw_encoding_matched": 20,
+        "APTOS/grade3/raw_pipeline": 20,
+        "APTOS/grade4/fixed_tensor": 22,
+        "APTOS/grade4/raw_encoding_matched": 22,
+        "APTOS/grade4/raw_pipeline": 22,
+        "MESSIDOR2/grade0/fixed_tensor": 25,
+        "MESSIDOR2/grade0/raw_encoding_matched": 25,
+        "MESSIDOR2/grade0/raw_pipeline": 25,
+        "MESSIDOR2/grade1/fixed_tensor": 22,
+        "MESSIDOR2/grade1/raw_encoding_matched": 22,
+        "MESSIDOR2/grade1/raw_pipeline": 22,
+        "MESSIDOR2/grade2/fixed_tensor": 23,
+        "MESSIDOR2/grade2/raw_encoding_matched": 23,
+        "MESSIDOR2/grade2/raw_pipeline": 23,
+        "MESSIDOR2/grade3/fixed_tensor": 20,
+        "MESSIDOR2/grade3/raw_encoding_matched": 20,
+        "MESSIDOR2/grade3/raw_pipeline": 20,
+        "MESSIDOR2/grade4/fixed_tensor": 20,
+        "MESSIDOR2/grade4/raw_encoding_matched": 20,
+        "MESSIDOR2/grade4/raw_pipeline": 20
+      },
+      "maximum_scalar_softmax_reconstruction_error": 4.440892098500626e-16,
+      "maximum_risk_reconstruction_error": 0.0,
+      "fixed_tensor_vs_desktop_litert": {
+        "APTOS": {
+          "N": 108,
+          "top1_agree_N": 108,
+          "maximum_absolute_logit_difference": 3.528594970703125e-05,
+          "maximum_absolute_probability_difference": 6.968414538510714e-06,
+          "decision_agreement_N": {
+            "risk_0.5": 108,
+            "source_sens_90": 108,
+            "source_sens_95": 108,
+            "source_sens_98": 107,
+            "source_sens_99": 108
+          }
+        },
+        "MESSIDOR2": {
+          "N": 110,
+          "top1_agree_N": 110,
+          "maximum_absolute_logit_difference": 1.9311904907226562e-05,
+          "maximum_absolute_probability_difference": 3.524330537379994e-06,
+          "decision_agreement_N": {
+            "risk_0.5": 110,
+            "source_sens_90": 110,
+            "source_sens_95": 110,
+            "source_sens_98": 110,
+            "source_sens_99": 110
+          }
+        }
+      },
+      "arm_vs_fixed_tensor": {
+        "APTOS/raw_pipeline": {
+          "N": 108,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 0,
+          "maximum_absolute_probability_difference": 0.030847800445109763,
+          "decision_change_N": {
+            "risk_0.5": 1,
+            "source_sens_90": 0,
+            "source_sens_95": 0,
+            "source_sens_98": 0,
+            "source_sens_99": 1
+          }
+        },
+        "APTOS/raw_encoding_matched": {
+          "N": 108,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 0,
+          "maximum_absolute_probability_difference": 0.030847800445109763,
+          "decision_change_N": {
+            "risk_0.5": 1,
+            "source_sens_90": 0,
+            "source_sens_95": 0,
+            "source_sens_98": 0,
+            "source_sens_99": 1
+          }
+        },
+        "MESSIDOR2/raw_pipeline": {
+          "N": 110,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 5,
+          "maximum_absolute_probability_difference": 0.37152371744649587,
+          "decision_change_N": {
+            "risk_0.5": 3,
+            "source_sens_90": 2,
+            "source_sens_95": 4,
+            "source_sens_98": 5,
+            "source_sens_99": 5
+          }
+        },
+        "MESSIDOR2/raw_encoding_matched": {
+          "N": 110,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 1,
+          "maximum_absolute_probability_difference": 0.05268497341275896,
+          "decision_change_N": {
+            "risk_0.5": 1,
+            "source_sens_90": 1,
+            "source_sens_95": 2,
+            "source_sens_98": 0,
+            "source_sens_99": 1
+          }
+        }
+      }
+    },
+    "mobilenetv3_large": {
+      "record_count": 654,
+      "grade_domain_arm_counts": {
+        "APTOS/grade0/fixed_tensor": 20,
+        "APTOS/grade0/raw_encoding_matched": 20,
+        "APTOS/grade0/raw_pipeline": 20,
+        "APTOS/grade1/fixed_tensor": 20,
+        "APTOS/grade1/raw_encoding_matched": 20,
+        "APTOS/grade1/raw_pipeline": 20,
+        "APTOS/grade2/fixed_tensor": 26,
+        "APTOS/grade2/raw_encoding_matched": 26,
+        "APTOS/grade2/raw_pipeline": 26,
+        "APTOS/grade3/fixed_tensor": 20,
+        "APTOS/grade3/raw_encoding_matched": 20,
+        "APTOS/grade3/raw_pipeline": 20,
+        "APTOS/grade4/fixed_tensor": 22,
+        "APTOS/grade4/raw_encoding_matched": 22,
+        "APTOS/grade4/raw_pipeline": 22,
+        "MESSIDOR2/grade0/fixed_tensor": 25,
+        "MESSIDOR2/grade0/raw_encoding_matched": 25,
+        "MESSIDOR2/grade0/raw_pipeline": 25,
+        "MESSIDOR2/grade1/fixed_tensor": 22,
+        "MESSIDOR2/grade1/raw_encoding_matched": 22,
+        "MESSIDOR2/grade1/raw_pipeline": 22,
+        "MESSIDOR2/grade2/fixed_tensor": 23,
+        "MESSIDOR2/grade2/raw_encoding_matched": 23,
+        "MESSIDOR2/grade2/raw_pipeline": 23,
+        "MESSIDOR2/grade3/fixed_tensor": 20,
+        "MESSIDOR2/grade3/raw_encoding_matched": 20,
+        "MESSIDOR2/grade3/raw_pipeline": 20,
+        "MESSIDOR2/grade4/fixed_tensor": 20,
+        "MESSIDOR2/grade4/raw_encoding_matched": 20,
+        "MESSIDOR2/grade4/raw_pipeline": 20
+      },
+      "maximum_scalar_softmax_reconstruction_error": 4.440892098500626e-16,
+      "maximum_risk_reconstruction_error": 0.0,
+      "fixed_tensor_vs_desktop_litert": {
+        "APTOS": {
+          "N": 108,
+          "top1_agree_N": 108,
+          "maximum_absolute_logit_difference": 3.814697265625e-05,
+          "maximum_absolute_probability_difference": 3.3453897418933565e-06,
+          "decision_agreement_N": {
+            "risk_0.5": 108,
+            "source_sens_90": 108,
+            "source_sens_95": 108,
+            "source_sens_98": 107,
+            "source_sens_99": 108
+          }
+        },
+        "MESSIDOR2": {
+          "N": 110,
+          "top1_agree_N": 110,
+          "maximum_absolute_logit_difference": 2.6702880859375e-05,
+          "maximum_absolute_probability_difference": 4.725791607818053e-06,
+          "decision_agreement_N": {
+            "risk_0.5": 110,
+            "source_sens_90": 110,
+            "source_sens_95": 110,
+            "source_sens_98": 110,
+            "source_sens_99": 110
+          }
+        }
+      },
+      "arm_vs_fixed_tensor": {
+        "APTOS/raw_pipeline": {
+          "N": 108,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 0,
+          "maximum_absolute_probability_difference": 0.010036089173650314,
+          "decision_change_N": {
+            "risk_0.5": 0,
+            "source_sens_90": 1,
+            "source_sens_95": 0,
+            "source_sens_98": 0,
+            "source_sens_99": 2
+          }
+        },
+        "APTOS/raw_encoding_matched": {
+          "N": 108,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 0,
+          "maximum_absolute_probability_difference": 0.010036089173650314,
+          "decision_change_N": {
+            "risk_0.5": 0,
+            "source_sens_90": 1,
+            "source_sens_95": 0,
+            "source_sens_98": 0,
+            "source_sens_99": 2
+          }
+        },
+        "MESSIDOR2/raw_pipeline": {
+          "N": 110,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 1,
+          "maximum_absolute_probability_difference": 0.2091706306140551,
+          "decision_change_N": {
+            "risk_0.5": 0,
+            "source_sens_90": 1,
+            "source_sens_95": 0,
+            "source_sens_98": 1,
+            "source_sens_99": 4
+          }
+        },
+        "MESSIDOR2/raw_encoding_matched": {
+          "N": 110,
+          "identical_tensor_N": 0,
+          "top1_changed_N": 0,
+          "maximum_absolute_probability_difference": 0.02929205191049969,
+          "decision_change_N": {
+            "risk_0.5": 0,
+            "source_sens_90": 1,
+            "source_sens_95": 1,
+            "source_sens_98": 1,
+            "source_sens_99": 0
+          }
+        }
+      }
+    }
+  },
+  "observed_records": 1308,
+  "checks": 41015,
+  "failure_count": 0,
+  "failures": [],
+  "identities": {
+    "manifest_sha256": "4da3680c51f2d39080046753248bb773a1eb5d707a4848dff58928a4eb07d56d",
+    "APK_sha256": "297adba97c725c397868d49c530c12ca7e3f8bf6e5e6225fb866d50393fbf2ee",
+    "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894",
+    "environment_sha256": "f1d61e0f0b18f0b26551eb681b084e4933b7c825b86dccda4bc7d6d0f5c89a01",
+    "runtime_config_sha256": "95b65dec58ad18b0b3ed4afd4976464bfff04ee70cdc9995ab929b3fa3ce2ae0",
+    "reference_csv_sha256": {
+      "efficientnet_lite0": "72bec27675d5155c78e8b8a55b8709f818838551b1aed26789a48d3b122483eb",
+      "mobilenetv3_large": "419a8862913eb20785fcd72230582406103889ab8d3ada9020781676efb740aa"
+    },
+    "android_jsonl_sha256": {
+      "efficientnet_lite0": "074cb243d02bb53e39799c91e4da1b2ec2c071a1f73d7fafbc33c1f04dba9edb",
+      "mobilenetv3_large": "9d6e2177e3e21568d28ab8c1558a42a1a90cb38548a3cb7218fef884325f855c"
+    }
+  },
+  "interpretation": "PASS concerns identity, coverage and arithmetic. Runtime/arm disagreements, if any, remain actual experimental findings in the comparison tables; no agreement was assumed. New debug times are not a replacement performance benchmark."
+}

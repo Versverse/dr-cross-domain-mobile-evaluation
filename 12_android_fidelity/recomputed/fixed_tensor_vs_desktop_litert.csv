@@ -1,0 +1,5 @@
+model,dataset,N,top1_agree_N,maximum_absolute_logit_difference,maximum_absolute_probability_difference,risk_0.5_agreement_N,source_sens_90_agreement_N,source_sens_95_agreement_N,source_sens_98_agreement_N,source_sens_99_agreement_N
+efficientnet_lite0,APTOS,108,108,3.528594970703125e-05,6.968414538510714e-06,108,108,108,107,108
+efficientnet_lite0,MESSIDOR2,110,110,1.9311904907226562e-05,3.524330537379994e-06,110,110,110,110,110
+mobilenetv3_large,APTOS,108,108,3.814697265625e-05,3.3453897418933565e-06,108,108,108,107,108
+mobilenetv3_large,MESSIDOR2,110,110,2.6702880859375e-05,4.725791607818053e-06,110,110,110,110,110
