@@ -1,0 +1,187 @@
+model_name: efficientnet_lite0
+tflite_filename: aptos_fixedsplit_efficientnet_lite0_float32.tflite
+adb_start_output:
+Starting: Intent { cmp=com.example.aptosedgetest/.MainActivity (has extras) }
+Status: ok
+LaunchState: COLD
+Activity: com.example.aptosedgetest/.MainActivity
+TotalTime: 501
+WaitTime: 518
+Complete
+
+===== logcat DR_TEST raw output =====
+--------- beginning of main
+07-07 23:03:40.670 I/DR_TEST (21877): OpenCV initialized successfully.
+07-07 23:03:40.670 I/DR_TEST (21877): Starting diabetic retinopathy end-to-end OpenCV + TFLite latency test
+07-07 23:03:40.670 I/DR_TEST (21877): Model name: efficientnet_lite0
+07-07 23:03:40.670 I/DR_TEST (21877): Model asset: aptos_fixedsplit_efficientnet_lite0_float32.tflite
+07-07 23:03:40.670 I/DR_TEST (21877): Android ImageNet mean/std normalization enabled: false
+07-07 23:03:40.671 I/DR_TEST (21877): OpenCV preprocessing: crop threshold=15.0, resize=224x224, CLAHE clipLimit=2.0, tileGrid=8x8
+07-07 23:03:40.702 I/DR_TEST (21877): Approx memory before test: 46639 KB PSS
+07-07 23:03:40.703 I/DR_TEST (21877): TensorFlow Lite options: numThreads=4, XNNPACK=true
+07-07 23:03:40.728 I/DR_TEST (21877): Input shape: [1, 224, 224, 3]
+07-07 23:03:40.728 I/DR_TEST (21877): Input data type: FLOAT32
+07-07 23:03:40.728 I/DR_TEST (21877): Input quantization scale: 0.0
+07-07 23:03:40.728 I/DR_TEST (21877): Input quantization zero point: 0
+07-07 23:03:40.728 I/DR_TEST (21877): Input target: 224x224, channels=3
+07-07 23:03:40.729 I/DR_TEST (21877): Output shape: [1, 5]
+07-07 23:03:40.729 I/DR_TEST (21877): Output data type: FLOAT32
+07-07 23:03:40.729 I/DR_TEST (21877): Output quantization scale: 0.0
+07-07 23:03:40.729 I/DR_TEST (21877): Output quantization zero point: 0
+07-07 23:03:40.746 I/DR_TEST (21877): Found 20 supported raw images in assets/APTOS_val100_original/0_No_DR
+07-07 23:03:40.747 I/DR_TEST (21877): Found 20 supported raw images in assets/APTOS_val100_original/1_Mild
+07-07 23:03:40.749 I/DR_TEST (21877): Found 20 supported raw images in assets/APTOS_val100_original/2_Moderate
+07-07 23:03:40.750 I/DR_TEST (21877): Found 20 supported raw images in assets/APTOS_val100_original/3_Severe
+07-07 23:03:40.751 I/DR_TEST (21877): Found 20 supported raw images in assets/APTOS_val100_original/4_Proliferative_DR
+07-07 23:03:40.751 I/DR_TEST (21877): Dataset root: assets/APTOS_val100_original
+07-07 23:03:40.751 I/DR_TEST (21877): Total supported raw images found: 100
+07-07 23:03:40.753 I/DR_TEST (21877): Debug preprocessed images directory: /storage/emulated/0/Android/data/com.example.aptosedgetest/files/debug_preprocessed
+07-07 23:03:40.753 I/DR_TEST (21877): Running 5 warm-up inferences using APTOS_val100_original/0_No_DR/08b6e3240858.png
+07-07 23:03:41.048 I/DR_TEST (21877): Warm-up 1/5 tflite_inference_ms=25.139
+07-07 23:03:41.072 I/DR_TEST (21877): Warm-up 2/5 tflite_inference_ms=23.685
+07-07 23:03:41.096 I/DR_TEST (21877): Warm-up 3/5 tflite_inference_ms=23.635
+07-07 23:03:41.120 I/DR_TEST (21877): Warm-up 4/5 tflite_inference_ms=23.681
+07-07 23:03:41.143 I/DR_TEST (21877): Warm-up 5/5 tflite_inference_ms=23.661
+07-07 23:03:41.255 I/DR_TEST (21877): Saved debug preprocessed image: /storage/emulated/0/Android/data/com.example.aptosedgetest/files/debug_preprocessed/001_0_No_DR_08b6e3240858.png
+07-07 23:03:41.284 I/DR_TEST (21877): image=1/100, path=APTOS_val100_original/0_No_DR/08b6e3240858.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=76.697, opencv_preprocess_ms=30.103, input_conversion_ms=3.603, tflite_inference_ms=23.855, output_decode_ms=0.466, end_to_end_ms=139.793
+07-07 23:03:41.404 I/DR_TEST (21877): Saved debug preprocessed image: /storage/emulated/0/Android/data/com.example.aptosedgetest/files/debug_preprocessed/002_0_No_DR_0a85a1e8f9e9.png
+07-07 23:03:41.432 I/DR_TEST (21877): image=2/100, path=APTOS_val100_original/0_No_DR/0a85a1e8f9e9.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=88.838, opencv_preprocess_ms=29.229, input_conversion_ms=3.521, tflite_inference_ms=23.664, output_decode_ms=0.037, end_to_end_ms=147.669
+07-07 23:03:41.491 I/DR_TEST (21877): Saved debug preprocessed image: /storage/emulated/0/Android/data/com.example.aptosedgetest/files/debug_preprocessed/003_0_No_DR_0abf0c485f66.png
+07-07 23:03:41.519 I/DR_TEST (21877): image=3/100, path=APTOS_val100_original/0_No_DR/0abf0c485f66.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=44.182, opencv_preprocess_ms=13.219, input_conversion_ms=3.515, tflite_inference_ms=23.636, output_decode_ms=0.035, end_to_end_ms=86.633
+07-07 23:03:41.548 I/DR_TEST (21877): Saved debug preprocessed image: /storage/emulated/0/Android/data/com.example.aptosedgetest/files/debug_preprocessed/004_0_No_DR_1d3e9b939732.png
+07-07 23:03:41.575 I/DR_TEST (21877): image=4/100, path=APTOS_val100_original/0_No_DR/1d3e9b939732.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=18.178, opencv_preprocess_ms=8.312, input_conversion_ms=3.518, tflite_inference_ms=23.568, output_decode_ms=0.055, end_to_end_ms=56.029
+07-07 23:03:41.608 I/DR_TEST (21877): Saved debug preprocessed image: /storage/emulated/0/Android/data/com.example.aptosedgetest/files/debug_preprocessed/005_0_No_DR_21037f5c7790.png
+07-07 23:03:41.636 I/DR_TEST (21877): image=5/100, path=APTOS_val100_original/0_No_DR/21037f5c7790.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=19.141, opencv_preprocess_ms=11.540, input_conversion_ms=3.526, tflite_inference_ms=24.141, output_decode_ms=0.037, end_to_end_ms=60.584
+07-07 23:03:41.691 I/DR_TEST (21877): image=6/100, path=APTOS_val100_original/0_No_DR/28503940d10b.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=19.046, opencv_preprocess_ms=8.567, input_conversion_ms=3.502, tflite_inference_ms=23.628, output_decode_ms=0.038, end_to_end_ms=54.794
+07-07 23:03:41.730 I/DR_TEST (21877): image=7/100, path=APTOS_val100_original/0_No_DR/2b10f138e67d.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=7.209, opencv_preprocess_ms=3.662, input_conversion_ms=3.489, tflite_inference_ms=24.065, output_decode_ms=0.036, end_to_end_ms=38.472
+07-07 23:03:41.785 I/DR_TEST (21877): image=8/100, path=APTOS_val100_original/0_No_DR/3908b3cfd620.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=19.074, opencv_preprocess_ms=8.091, input_conversion_ms=3.456, tflite_inference_ms=23.594, output_decode_ms=0.037, end_to_end_ms=54.263
+07-07 23:03:41.868 I/DR_TEST (21877): image=9/100, path=APTOS_val100_original/0_No_DR/60edda7b4871.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=42.742, opencv_preprocess_ms=12.576, input_conversion_ms=3.497, tflite_inference_ms=23.625, output_decode_ms=0.055, end_to_end_ms=82.507
+07-07 23:03:41.996 I/DR_TEST (21877): image=10/100, path=APTOS_val100_original/0_No_DR/633fe9dbaf39.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=69.350, opencv_preprocess_ms=31.222, input_conversion_ms=3.688, tflite_inference_ms=23.653, output_decode_ms=0.037, end_to_end_ms=127.963
+07-07 23:03:42.082 I/DR_TEST (21877): image=11/100, path=APTOS_val100_original/0_No_DR/66b88a4bc474.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=45.112, opencv_preprocess_ms=12.843, input_conversion_ms=3.507, tflite_inference_ms=23.747, output_decode_ms=0.038, end_to_end_ms=85.261
+07-07 23:03:42.136 I/DR_TEST (21877): image=12/100, path=APTOS_val100_original/0_No_DR/69b3a00927fc.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=18.353, opencv_preprocess_ms=8.149, input_conversion_ms=3.506, tflite_inference_ms=23.606, output_decode_ms=0.037, end_to_end_ms=53.665
+07-07 23:03:42.191 I/DR_TEST (21877): image=13/100, path=APTOS_val100_original/0_No_DR/7347bd23ba80.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=19.794, opencv_preprocess_ms=8.122, input_conversion_ms=3.508, tflite_inference_ms=23.656, output_decode_ms=0.037, end_to_end_ms=55.130
+07-07 23:03:42.276 I/DR_TEST (21877): image=14/100, path=APTOS_val100_original/0_No_DR/a07efb1ecfc0.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=43.652, opencv_preprocess_ms=12.970, input_conversion_ms=3.476, tflite_inference_ms=23.710, output_decode_ms=0.038, end_to_end_ms=83.860
+07-07 23:03:42.329 I/DR_TEST (21877): image=15/100, path=APTOS_val100_original/0_No_DR/bc92a61a1f9c.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=17.975, opencv_preprocess_ms=8.305, input_conversion_ms=3.503, tflite_inference_ms=23.705, output_decode_ms=0.036, end_to_end_ms=53.537
+07-07 23:03:42.388 I/DR_TEST (21877): image=16/100, path=APTOS_val100_original/0_No_DR/d38cf0f4a9af.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=23.456, opencv_preprocess_ms=7.480, input_conversion_ms=3.526, tflite_inference_ms=23.668, output_decode_ms=0.039, end_to_end_ms=58.181
+07-07 23:03:42.469 I/DR_TEST (21877): image=17/100, path=APTOS_val100_original/0_No_DR/e03a74e7d74f.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=40.122, opencv_preprocess_ms=13.269, input_conversion_ms=3.580, tflite_inference_ms=23.707, output_decode_ms=0.055, end_to_end_ms=80.747
+07-07 23:03:42.522 I/DR_TEST (21877): image=18/100, path=APTOS_val100_original/0_No_DR/e246cd89e1cc.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=17.608, opencv_preprocess_ms=7.966, input_conversion_ms=3.539, tflite_inference_ms=23.646, output_decode_ms=0.036, end_to_end_ms=52.807
+07-07 23:03:42.578 I/DR_TEST (21877): image=19/100, path=APTOS_val100_original/0_No_DR/f1d719c97838.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=20.531, opencv_preprocess_ms=7.934, input_conversion_ms=3.553, tflite_inference_ms=23.730, output_decode_ms=0.038, end_to_end_ms=55.801
+07-07 23:03:42.634 I/DR_TEST (21877): image=20/100, path=APTOS_val100_original/0_No_DR/f7e9fa75c7c1.png, truth=0_No_DR, predicted=0_No_DR, image_load_ms=19.633, opencv_preprocess_ms=8.139, input_conversion_ms=3.554, tflite_inference_ms=23.626, output_decode_ms=0.036, end_to_end_ms=55.001
+07-07 23:03:42.739 I/DR_TEST (21877): image=21/100, path=APTOS_val100_original/1_Mild/0024cdab0c1e.png, truth=1_Mild, predicted=1_Mild, image_load_ms=55.147, opencv_preprocess_ms=22.514, input_conversion_ms=3.555, tflite_inference_ms=23.610, output_decode_ms=0.035, end_to_end_ms=104.874
+07-07 23:03:42.979 I/DR_TEST (21877): image=22/100, path=APTOS_val100_original/1_Mild/06b71823f9cd.png, truth=1_Mild, predicted=4_Proliferative_DR, image_load_ms=153.845, opencv_preprocess_ms=58.369, input_conversion_ms=3.535, tflite_inference_ms=23.577, output_decode_ms=0.037, end_to_end_ms=239.377
+07-07 23:03:43.106 I/DR_TEST (21877): image=23/100, path=APTOS_val100_original/1_Mild/0d310aba6373.png, truth=1_Mild, predicted=2_Moderate, image_load_ms=70.375, opencv_preprocess_ms=29.137, input_conversion_ms=3.541, tflite_inference_ms=23.717, output_decode_ms=0.037, end_to_end_ms=126.819
+07-07 23:03:43.218 I/DR_TEST (21877): image=24/100, path=APTOS_val100_original/1_Mild/0dc031c94225.png, truth=1_Mild, predicted=1_Mild, image_load_ms=61.697, opencv_preprocess_ms=22.507, input_conversion_ms=3.524, tflite_inference_ms=24.365, output_decode_ms=0.038, end_to_end_ms=112.145
+07-07 23:03:43.446 I/DR_TEST (21877): image=25/100, path=APTOS_val100_original/1_Mild/18b06f56ab27.png, truth=1_Mild, predicted=2_Moderate, image_load_ms=152.713, opencv_preprocess_ms=47.323, input_conversion_ms=3.610, tflite_inference_ms=23.750, output_decode_ms=0.036, end_to_end_ms=227.446
+07-07 23:03:43.552 I/DR_TEST (21877): image=26/100, path=APTOS_val100_original/1_Mild/1e8a1fdee5b9.png, truth=1_Mild, predicted=1_Mild, image_load_ms=52.995, opencv_preprocess_ms=24.767, input_conversion_ms=3.491, tflite_inference_ms=23.772, output_decode_ms=0.036, end_to_end_ms=105.076
+07-07 23:03:43.682 I/DR_TEST (21877): image=27/100, path=APTOS_val100_original/1_Mild/3044022c6969.png, truth=1_Mild, predicted=1_Mild, image_load_ms=72.180, opencv_preprocess_ms=30.473, input_conversion_ms=3.588, tflite_inference_ms=24.018, output_decode_ms=0.037, end_to_end_ms=130.310
+07-07 23:03:43.798 I/DR_TEST (21877): image=28/100, path=APTOS_val100_original/1_Mild/382752f6694a.png, truth=1_Mild, predicted=1_Mild, image_load_ms=62.630, opencv_preprocess_ms=25.034, input_conversion_ms=3.541, tflite_inference_ms=23.687, output_decode_ms=0.038, end_to_end_ms=114.945
+07-07 23:03:43.913 I/DR_TEST (21877): image=29/100, path=APTOS_val100_original/1_Mild/3b73a3a4a734.png, truth=1_Mild, predicted=1_Mild, image_load_ms=63.017, opencv_preprocess_ms=24.313, input_conversion_ms=3.706, tflite_inference_ms=23.712, output_decode_ms=0.037, end_to_end_ms=114.800
+07-07 23:03:44.028 I/DR_TEST (21877): image=30/100, path=APTOS_val100_original/1_Mild/52ae917fcea4.png, truth=1_Mild, predicted=1_Mild, image_load_ms=61.025, opencv_preprocess_ms=26.051, input_conversion_ms=3.533, tflite_inference_ms=23.625, output_decode_ms=0.037, end_to_end_ms=114.284
+07-07 23:03:44.147 I/DR_TEST (21877): image=31/100, path=APTOS_val100_original/1_Mild/5671eb95512b.png, truth=1_Mild, predicted=2_Moderate, image_load_ms=64.714, opencv_preprocess_ms=26.592, input_conversion_ms=3.541, tflite_inference_ms=23.652, output_decode_ms=0.060, end_to_end_ms=118.572
+07-07 23:03:44.289 I/DR_TEST (21877): image=32/100, path=APTOS_val100_original/1_Mild/578109578b46.png, truth=1_Mild, predicted=1_Mild, image_load_ms=83.938, opencv_preprocess_ms=30.919, input_conversion_ms=3.573, tflite_inference_ms=23.816, output_decode_ms=0.037, end_to_end_ms=142.296
+07-07 23:03:44.404 I/DR_TEST (21877): image=33/100, path=APTOS_val100_original/1_Mild/6d292ca4c9ad.png, truth=1_Mild, predicted=1_Mild, image_load_ms=61.537, opencv_preprocess_ms=25.925, input_conversion_ms=3.517, tflite_inference_ms=23.688, output_decode_ms=0.036, end_to_end_ms=114.717
+07-07 23:03:44.527 I/DR_TEST (21877): image=34/100, path=APTOS_val100_original/1_Mild/99132193eaa0.png, truth=1_Mild, predicted=2_Moderate, image_load_ms=66.786, opencv_preprocess_ms=28.244, input_conversion_ms=3.569, tflite_inference_ms=23.738, output_decode_ms=0.035, end_to_end_ms=122.386
+07-07 23:03:44.650 I/DR_TEST (21877): image=35/100, path=APTOS_val100_original/1_Mild/a75bab2463d4.png, truth=1_Mild, predicted=1_Mild, image_load_ms=64.747, opencv_preprocess_ms=30.842, input_conversion_ms=3.558, tflite_inference_ms=23.673, output_decode_ms=0.037, end_to_end_ms=122.870
+07-07 23:03:44.767 I/DR_TEST (21877): image=36/100, path=APTOS_val100_original/1_Mild/af133a85ea0c.png, truth=1_Mild, predicted=1_Mild, image_load_ms=61.919, opencv_preprocess_ms=27.083, input_conversion_ms=3.542, tflite_inference_ms=23.745, output_decode_ms=0.036, end_to_end_ms=116.338
+07-07 23:03:44.922 I/DR_TEST (21877): image=37/100, path=APTOS_val100_original/1_Mild/b50b30aa6e6c.png, truth=1_Mild, predicted=2_Moderate, image_load_ms=88.611, opencv_preprocess_ms=38.339, input_conversion_ms=3.613, tflite_inference_ms=23.646, output_decode_ms=0.039, end_to_end_ms=154.261
+07-07 23:03:45.036 I/DR_TEST (21877): image=38/100, path=APTOS_val100_original/1_Mild/c0968d41eb93.png, truth=1_Mild, predicted=1_Mild, image_load_ms=62.813, opencv_preprocess_ms=24.287, input_conversion_ms=3.564, tflite_inference_ms=23.735, output_decode_ms=0.036, end_to_end_ms=114.452
+07-07 23:03:45.196 I/DR_TEST (21877): image=39/100, path=APTOS_val100_original/1_Mild/f47a2a4a0411.png, truth=1_Mild, predicted=1_Mild, image_load_ms=95.334, opencv_preprocess_ms=36.048, input_conversion_ms=3.562, tflite_inference_ms=23.693, output_decode_ms=0.038, end_to_end_ms=158.688
+07-07 23:03:45.388 I/DR_TEST (21877): image=40/100, path=APTOS_val100_original/1_Mild/f762c272c522.png, truth=1_Mild, predicted=2_Moderate, image_load_ms=117.713, opencv_preprocess_ms=46.791, input_conversion_ms=3.575, tflite_inference_ms=23.669, output_decode_ms=0.037, end_to_end_ms=191.799
+07-07 23:03:45.504 I/DR_TEST (21877): image=41/100, path=APTOS_val100_original/2_Moderate/094858f005ab.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=61.657, opencv_preprocess_ms=27.475, input_conversion_ms=3.498, tflite_inference_ms=23.635, output_decode_ms=0.037, end_to_end_ms=116.316
+07-07 23:03:45.639 I/DR_TEST (21877): image=42/100, path=APTOS_val100_original/2_Moderate/12025b34deb8.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=74.166, opencv_preprocess_ms=31.893, input_conversion_ms=3.735, tflite_inference_ms=24.116, output_decode_ms=0.036, end_to_end_ms=133.961
+07-07 23:03:45.749 I/DR_TEST (21877): image=43/100, path=APTOS_val100_original/2_Moderate/180afe1d5ef7.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=57.786, opencv_preprocess_ms=24.928, input_conversion_ms=3.568, tflite_inference_ms=23.654, output_decode_ms=0.036, end_to_end_ms=109.984
+07-07 23:03:45.970 I/DR_TEST (21877): image=44/100, path=APTOS_val100_original/2_Moderate/20c883d3bd38.png, truth=2_Moderate, predicted=3_Severe, image_load_ms=141.976, opencv_preprocess_ms=51.483, input_conversion_ms=3.593, tflite_inference_ms=23.662, output_decode_ms=0.037, end_to_end_ms=220.763
+07-07 23:03:46.111 I/DR_TEST (21877): image=45/100, path=APTOS_val100_original/2_Moderate/42a67337fa8e.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=77.820, opencv_preprocess_ms=35.521, input_conversion_ms=3.510, tflite_inference_ms=23.703, output_decode_ms=0.036, end_to_end_ms=140.603
+07-07 23:03:46.183 I/DR_TEST (21877): image=46/100, path=APTOS_val100_original/2_Moderate/541db13517e2.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=27.742, opencv_preprocess_ms=16.581, input_conversion_ms=3.573, tflite_inference_ms=23.665, output_decode_ms=0.037, end_to_end_ms=71.612
+07-07 23:03:46.303 I/DR_TEST (21877): image=47/100, path=APTOS_val100_original/2_Moderate/5e7cc6ab4ac4.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=62.044, opencv_preprocess_ms=29.694, input_conversion_ms=3.523, tflite_inference_ms=23.702, output_decode_ms=0.036, end_to_end_ms=119.012
+07-07 23:03:46.421 I/DR_TEST (21877): image=48/100, path=APTOS_val100_original/2_Moderate/711d1480d2e3.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=64.671, opencv_preprocess_ms=26.381, input_conversion_ms=3.574, tflite_inference_ms=23.676, output_decode_ms=0.036, end_to_end_ms=118.352
+07-07 23:03:46.481 I/DR_TEST (21877): image=49/100, path=APTOS_val100_original/2_Moderate/77e7c7a160c8.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=21.174, opencv_preprocess_ms=10.487, input_conversion_ms=4.060, tflite_inference_ms=23.805, output_decode_ms=0.036, end_to_end_ms=59.575
+07-07 23:03:46.628 I/DR_TEST (21877): image=50/100, path=APTOS_val100_original/2_Moderate/78a577c3e0bf.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=81.920, opencv_preprocess_ms=37.282, input_conversion_ms=3.555, tflite_inference_ms=23.724, output_decode_ms=0.036, end_to_end_ms=146.532
+07-07 23:03:46.732 I/DR_TEST (21877): image=51/100, path=APTOS_val100_original/2_Moderate/7d261f986bef.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=57.431, opencv_preprocess_ms=18.770, input_conversion_ms=3.471, tflite_inference_ms=23.663, output_decode_ms=0.037, end_to_end_ms=103.386
+07-07 23:03:46.949 I/DR_TEST (21877): image=52/100, path=APTOS_val100_original/2_Moderate/98f48850ebce.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=142.661, opencv_preprocess_ms=46.963, input_conversion_ms=3.592, tflite_inference_ms=23.692, output_decode_ms=0.037, end_to_end_ms=216.959
+07-07 23:03:47.064 I/DR_TEST (21877): image=53/100, path=APTOS_val100_original/2_Moderate/af8aa32beee4.png, truth=2_Moderate, predicted=1_Mild, image_load_ms=61.539, opencv_preprocess_ms=25.895, input_conversion_ms=3.529, tflite_inference_ms=23.621, output_decode_ms=0.037, end_to_end_ms=114.634
+07-07 23:03:47.139 I/DR_TEST (21877): image=54/100, path=APTOS_val100_original/2_Moderate/b82d5f1f1145.png, truth=2_Moderate, predicted=1_Mild, image_load_ms=34.048, opencv_preprocess_ms=13.308, input_conversion_ms=3.528, tflite_inference_ms=23.751, output_decode_ms=0.036, end_to_end_ms=74.685
+07-07 23:03:47.308 I/DR_TEST (21877): image=55/100, path=APTOS_val100_original/2_Moderate/bfd5c0e55420.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=98.883, opencv_preprocess_ms=42.111, input_conversion_ms=3.498, tflite_inference_ms=23.880, output_decode_ms=0.035, end_to_end_ms=168.420
+07-07 23:03:47.349 I/DR_TEST (21877): image=56/100, path=APTOS_val100_original/2_Moderate/cb602182cde3.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=9.347, opencv_preprocess_ms=3.749, input_conversion_ms=3.483, tflite_inference_ms=23.758, output_decode_ms=0.035, end_to_end_ms=40.384
+07-07 23:03:47.504 I/DR_TEST (21877): image=57/100, path=APTOS_val100_original/2_Moderate/ceb601fe8dba.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=91.852, opencv_preprocess_ms=36.425, input_conversion_ms=3.522, tflite_inference_ms=23.619, output_decode_ms=0.036, end_to_end_ms=155.466
+07-07 23:03:47.626 I/DR_TEST (21877): image=58/100, path=APTOS_val100_original/2_Moderate/d264396d8d1a.png, truth=2_Moderate, predicted=3_Severe, image_load_ms=64.098, opencv_preprocess_ms=29.576, input_conversion_ms=3.656, tflite_inference_ms=23.705, output_decode_ms=0.036, end_to_end_ms=121.085
+07-07 23:03:47.740 I/DR_TEST (21877): image=59/100, path=APTOS_val100_original/2_Moderate/e599151ca14b.png, truth=2_Moderate, predicted=3_Severe, image_load_ms=61.516, opencv_preprocess_ms=25.655, input_conversion_ms=3.483, tflite_inference_ms=23.627, output_decode_ms=0.037, end_to_end_ms=114.331
+07-07 23:03:47.891 I/DR_TEST (21877): image=60/100, path=APTOS_val100_original/2_Moderate/e868c3da340b.png, truth=2_Moderate, predicted=2_Moderate, image_load_ms=87.347, opencv_preprocess_ms=35.234, input_conversion_ms=3.528, tflite_inference_ms=23.713, output_decode_ms=0.037, end_to_end_ms=149.873
+07-07 23:03:48.005 I/DR_TEST (21877): image=61/100, path=APTOS_val100_original/3_Severe/070f67572d03.png, truth=3_Severe, predicted=3_Severe, image_load_ms=60.586, opencv_preprocess_ms=26.530, input_conversion_ms=3.561, tflite_inference_ms=23.614, output_decode_ms=0.037, end_to_end_ms=114.342
+07-07 23:03:48.254 I/DR_TEST (21877): image=62/100, path=APTOS_val100_original/3_Severe/0edadb2aa127.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=156.488, opencv_preprocess_ms=64.866, input_conversion_ms=3.598, tflite_inference_ms=23.716, output_decode_ms=0.037, end_to_end_ms=248.720
+07-07 23:03:48.372 I/DR_TEST (21877): image=63/100, path=APTOS_val100_original/3_Severe/0f96c358a250.png, truth=3_Severe, predicted=3_Severe, image_load_ms=64.843, opencv_preprocess_ms=25.518, input_conversion_ms=3.499, tflite_inference_ms=23.613, output_decode_ms=0.035, end_to_end_ms=117.520
+07-07 23:03:48.527 I/DR_TEST (21877): image=64/100, path=APTOS_val100_original/3_Severe/1623e8e3adc4.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=90.884, opencv_preprocess_ms=36.836, input_conversion_ms=3.515, tflite_inference_ms=23.602, output_decode_ms=0.036, end_to_end_ms=154.885
+07-07 23:03:48.685 I/DR_TEST (21877): image=65/100, path=APTOS_val100_original/3_Severe/1c9521878baf.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=91.788, opencv_preprocess_ms=38.225, input_conversion_ms=3.518, tflite_inference_ms=23.760, output_decode_ms=0.037, end_to_end_ms=157.342
+07-07 23:03:48.813 I/DR_TEST (21877): image=66/100, path=APTOS_val100_original/3_Severe/2bbd1f99ecc3.png, truth=3_Severe, predicted=1_Mild, image_load_ms=71.027, opencv_preprocess_ms=29.393, input_conversion_ms=3.531, tflite_inference_ms=23.698, output_decode_ms=0.036, end_to_end_ms=127.698
+07-07 23:03:48.962 I/DR_TEST (21877): image=67/100, path=APTOS_val100_original/3_Severe/36b5b3c9fb32.png, truth=3_Severe, predicted=3_Severe, image_load_ms=87.903, opencv_preprocess_ms=32.842, input_conversion_ms=3.534, tflite_inference_ms=23.735, output_decode_ms=0.038, end_to_end_ms=148.066
+07-07 23:03:49.122 I/DR_TEST (21877): image=68/100, path=APTOS_val100_original/3_Severe/6735931000ec.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=97.221, opencv_preprocess_ms=36.036, input_conversion_ms=3.556, tflite_inference_ms=23.731, output_decode_ms=0.037, end_to_end_ms=160.594
+07-07 23:03:49.269 I/DR_TEST (21877): image=69/100, path=APTOS_val100_original/3_Severe/72595230840c.png, truth=3_Severe, predicted=4_Proliferative_DR, image_load_ms=87.469, opencv_preprocess_ms=31.876, input_conversion_ms=3.549, tflite_inference_ms=23.643, output_decode_ms=0.036, end_to_end_ms=146.587
+07-07 23:03:49.384 I/DR_TEST (21877): image=70/100, path=APTOS_val100_original/3_Severe/74eee788edee.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=58.708, opencv_preprocess_ms=28.438, input_conversion_ms=3.722, tflite_inference_ms=23.828, output_decode_ms=0.037, end_to_end_ms=114.748
+07-07 23:03:49.527 I/DR_TEST (21877): image=71/100, path=APTOS_val100_original/3_Severe/80e7cc0a0649.png, truth=3_Severe, predicted=3_Severe, image_load_ms=82.256, opencv_preprocess_ms=32.160, input_conversion_ms=3.553, tflite_inference_ms=23.648, output_decode_ms=0.035, end_to_end_ms=141.665
+07-07 23:03:49.646 I/DR_TEST (21877): image=72/100, path=APTOS_val100_original/3_Severe/916ec976ff30.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=64.268, opencv_preprocess_ms=27.428, input_conversion_ms=3.935, tflite_inference_ms=23.729, output_decode_ms=0.036, end_to_end_ms=119.408
+07-07 23:03:49.829 I/DR_TEST (21877): image=73/100, path=APTOS_val100_original/3_Severe/91b6ebaa3678.png, truth=3_Severe, predicted=3_Severe, image_load_ms=119.568, opencv_preprocess_ms=35.628, input_conversion_ms=3.540, tflite_inference_ms=23.768, output_decode_ms=0.038, end_to_end_ms=182.555
+07-07 23:03:49.960 I/DR_TEST (21877): image=74/100, path=APTOS_val100_original/3_Severe/b191ba0a2b12.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=71.173, opencv_preprocess_ms=32.062, input_conversion_ms=3.572, tflite_inference_ms=23.674, output_decode_ms=0.038, end_to_end_ms=130.533
+07-07 23:03:50.113 I/DR_TEST (21877): image=75/100, path=APTOS_val100_original/3_Severe/b7e0f95353f2.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=89.892, opencv_preprocess_ms=35.602, input_conversion_ms=3.538, tflite_inference_ms=23.714, output_decode_ms=0.037, end_to_end_ms=152.796
+07-07 23:03:50.179 I/DR_TEST (21877): image=76/100, path=APTOS_val100_original/3_Severe/bb7e0a2544cd.png, truth=3_Severe, predicted=3_Severe, image_load_ms=28.989, opencv_preprocess_ms=9.415, input_conversion_ms=3.523, tflite_inference_ms=23.661, output_decode_ms=0.036, end_to_end_ms=65.638
+07-07 23:03:50.329 I/DR_TEST (21877): image=77/100, path=APTOS_val100_original/3_Severe/c3cd0200df79.png, truth=3_Severe, predicted=3_Severe, image_load_ms=83.051, opencv_preprocess_ms=39.187, input_conversion_ms=3.490, tflite_inference_ms=23.624, output_decode_ms=0.035, end_to_end_ms=149.401
+07-07 23:03:50.447 I/DR_TEST (21877): image=78/100, path=APTOS_val100_original/3_Severe/f092febbf5c0.png, truth=3_Severe, predicted=4_Proliferative_DR, image_load_ms=62.865, opencv_preprocess_ms=27.454, input_conversion_ms=3.525, tflite_inference_ms=23.714, output_decode_ms=0.036, end_to_end_ms=117.605
+07-07 23:03:50.577 I/DR_TEST (21877): image=79/100, path=APTOS_val100_original/3_Severe/fcc6aa6755e6.png, truth=3_Severe, predicted=3_Severe, image_load_ms=74.128, opencv_preprocess_ms=26.548, input_conversion_ms=5.338, tflite_inference_ms=23.965, output_decode_ms=0.035, end_to_end_ms=130.031
+07-07 23:03:50.646 I/DR_TEST (21877): image=80/100, path=APTOS_val100_original/3_Severe/fda39982a810.png, truth=3_Severe, predicted=2_Moderate, image_load_ms=30.744, opencv_preprocess_ms=10.050, input_conversion_ms=3.557, tflite_inference_ms=23.708, output_decode_ms=0.036, end_to_end_ms=68.108
+07-07 23:03:50.763 I/DR_TEST (21877): image=81/100, path=APTOS_val100_original/4_Proliferative_DR/080f66eedfb9.png, truth=4_Proliferative_DR, predicted=2_Moderate, image_load_ms=62.127, opencv_preprocess_ms=27.223, input_conversion_ms=3.539, tflite_inference_ms=23.670, output_decode_ms=0.038, end_to_end_ms=116.613
+07-07 23:03:50.838 I/DR_TEST (21877): image=82/100, path=APTOS_val100_original/4_Proliferative_DR/10fca1abf338.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=33.580, opencv_preprocess_ms=14.015, input_conversion_ms=3.565, tflite_inference_ms=23.693, output_decode_ms=0.036, end_to_end_ms=74.903
+07-07 23:03:50.993 I/DR_TEST (21877): image=83/100, path=APTOS_val100_original/4_Proliferative_DR/2df07eb5779f.png, truth=4_Proliferative_DR, predicted=2_Moderate, image_load_ms=89.389, opencv_preprocess_ms=38.694, input_conversion_ms=3.511, tflite_inference_ms=23.666, output_decode_ms=0.035, end_to_end_ms=155.309
+07-07 23:03:51.161 I/DR_TEST (21877): image=84/100, path=APTOS_val100_original/4_Proliferative_DR/3ccf96c1dd6d.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=98.165, opencv_preprocess_ms=41.456, input_conversion_ms=3.502, tflite_inference_ms=23.691, output_decode_ms=0.037, end_to_end_ms=166.863
+07-07 23:03:51.342 I/DR_TEST (21877): image=85/100, path=APTOS_val100_original/4_Proliferative_DR/46d3316c4857.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=117.983, opencv_preprocess_ms=35.968, input_conversion_ms=3.529, tflite_inference_ms=23.735, output_decode_ms=0.037, end_to_end_ms=181.265
+07-07 23:03:51.480 I/DR_TEST (21877): image=86/100, path=APTOS_val100_original/4_Proliferative_DR/4a693dd3921a.png, truth=4_Proliferative_DR, predicted=3_Severe, image_load_ms=74.079, opencv_preprocess_ms=34.953, input_conversion_ms=3.758, tflite_inference_ms=24.044, output_decode_ms=0.038, end_to_end_ms=136.888
+07-07 23:03:51.537 I/DR_TEST (21877): image=87/100, path=APTOS_val100_original/4_Proliferative_DR/6c3745a222da.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=20.685, opencv_preprocess_ms=8.940, input_conversion_ms=3.484, tflite_inference_ms=23.753, output_decode_ms=0.039, end_to_end_ms=56.913
+07-07 23:03:51.597 I/DR_TEST (21877): image=88/100, path=APTOS_val100_original/4_Proliferative_DR/70d657f8f503.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=24.053, opencv_preprocess_ms=8.743, input_conversion_ms=3.588, tflite_inference_ms=23.706, output_decode_ms=0.037, end_to_end_ms=60.142
+07-07 23:03:51.719 I/DR_TEST (21877): image=89/100, path=APTOS_val100_original/4_Proliferative_DR/7d626a7ffe76.png, truth=4_Proliferative_DR, predicted=3_Severe, image_load_ms=67.268, opencv_preprocess_ms=26.279, input_conversion_ms=3.737, tflite_inference_ms=23.593, output_decode_ms=0.036, end_to_end_ms=120.927
+07-07 23:03:51.840 I/DR_TEST (21877): image=90/100, path=APTOS_val100_original/4_Proliferative_DR/8ac0c44bbf24.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=63.957, opencv_preprocess_ms=30.266, input_conversion_ms=3.519, tflite_inference_ms=23.756, output_decode_ms=0.035, end_to_end_ms=121.548
+07-07 23:03:51.958 I/DR_TEST (21877): image=91/100, path=APTOS_val100_original/4_Proliferative_DR/8c7c26c52a6c.png, truth=4_Proliferative_DR, predicted=3_Severe, image_load_ms=62.372, opencv_preprocess_ms=24.393, input_conversion_ms=6.731, tflite_inference_ms=23.912, output_decode_ms=0.036, end_to_end_ms=117.459
+07-07 23:03:52.126 I/DR_TEST (21877): image=92/100, path=APTOS_val100_original/4_Proliferative_DR/8fd7ad26e691.png, truth=4_Proliferative_DR, predicted=2_Moderate, image_load_ms=101.941, opencv_preprocess_ms=37.919, input_conversion_ms=3.526, tflite_inference_ms=23.806, output_decode_ms=0.039, end_to_end_ms=167.242
+07-07 23:03:52.253 I/DR_TEST (21877): image=93/100, path=APTOS_val100_original/4_Proliferative_DR/a76b69e443ce.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=68.198, opencv_preprocess_ms=31.153, input_conversion_ms=3.568, tflite_inference_ms=23.605, output_decode_ms=0.069, end_to_end_ms=126.607
+07-07 23:03:52.472 I/DR_TEST (21877): image=94/100, path=APTOS_val100_original/4_Proliferative_DR/b90bc89ce8d8.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=142.646, opencv_preprocess_ms=49.041, input_conversion_ms=3.725, tflite_inference_ms=23.558, output_decode_ms=0.042, end_to_end_ms=219.026
+07-07 23:03:52.733 I/DR_TEST (21877): image=95/100, path=APTOS_val100_original/4_Proliferative_DR/b96b518596b3.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=168.844, opencv_preprocess_ms=64.325, input_conversion_ms=3.479, tflite_inference_ms=23.635, output_decode_ms=0.041, end_to_end_ms=260.338
+07-07 23:03:52.843 I/DR_TEST (21877): image=96/100, path=APTOS_val100_original/4_Proliferative_DR/ba08cee68c71.png, truth=4_Proliferative_DR, predicted=4_Proliferative_DR, image_load_ms=58.759, opencv_preprocess_ms=24.356, input_conversion_ms=3.469, tflite_inference_ms=23.636, output_decode_ms=0.040, end_to_end_ms=110.273
+07-07 23:03:52.901 I/DR_TEST (21877): image=97/100, path=APTOS_val100_original/4_Proliferative_DR/bfefa7344e7d.png, truth=4_Proliferative_DR, predicted=3_Severe, image_load_ms=20.874, opencv_preprocess_ms=8.540, input_conversion_ms=3.548, tflite_inference_ms=23.712, output_decode_ms=0.057, end_to_end_ms=56.745
+07-07 23:03:53.020 I/DR_TEST (21877): image=98/100, path=APTOS_val100_original/4_Proliferative_DR/c1799a6f5c65.png, truth=4_Proliferative_DR, predicted=2_Moderate, image_load_ms=61.021, opencv_preprocess_ms=31.121, input_conversion_ms=3.494, tflite_inference_ms=23.538, output_decode_ms=0.040, end_to_end_ms=119.227
+07-07 23:03:53.137 I/DR_TEST (21877): image=99/100, path=APTOS_val100_original/4_Proliferative_DR/f69835dc7c50.png, truth=4_Proliferative_DR, predicted=3_Severe, image_load_ms=64.859, opencv_preprocess_ms=23.889, input_conversion_ms=3.945, tflite_inference_ms=23.757, output_decode_ms=0.040, end_to_end_ms=116.504
+07-07 23:03:53.257 I/DR_TEST (21877): image=100/100, path=APTOS_val100_original/4_Proliferative_DR/fce93caa4758.png, truth=4_Proliferative_DR, predicted=1_Mild, image_load_ms=64.947, opencv_preprocess_ms=27.594, input_conversion_ms=3.689, tflite_inference_ms=23.689, output_decode_ms=0.042, end_to_end_ms=119.976
+07-07 23:03:53.273 I/DR_TEST (21877): CSV results saved to: /storage/emulated/0/Android/data/com.example.aptosedgetest/files/dr_latency_results_efficientnet_lite0.csv
+07-07 23:03:53.274 I/DR_TEST (21877): ACCURACY summary
+07-07 23:03:53.274 I/DR_TEST (21877): model_name=efficientnet_lite0
+07-07 23:03:53.274 I/DR_TEST (21877): tflite_filename=aptos_fixedsplit_efficientnet_lite0_float32.tflite
+07-07 23:03:53.274 I/DR_TEST (21877): num_images=100
+07-07 23:03:53.274 I/DR_TEST (21877): overall_accuracy_on_100_images=0.6600
+07-07 23:03:53.275 I/DR_TEST (21877): class0_correct=20 class0_total=20
+07-07 23:03:53.275 I/DR_TEST (21877): class1_correct=13 class1_total=20
+07-07 23:03:53.275 I/DR_TEST (21877): class2_correct=15 class2_total=20
+07-07 23:03:53.276 I/DR_TEST (21877): class3_correct=8 class3_total=20
+07-07 23:03:53.276 I/DR_TEST (21877): class4_correct=10 class4_total=20
+07-07 23:03:53.276 I/DR_TEST (21877): OPENCV_PREPROCESS summary
+07-07 23:03:53.276 I/DR_TEST (21877): count=100
+07-07 23:03:53.276 I/DR_TEST (21877): mean_ms=26.616
+07-07 23:03:53.276 I/DR_TEST (21877): median_ms=27.326
+07-07 23:03:53.276 I/DR_TEST (21877): p95_ms=47.323
+07-07 23:03:53.276 I/DR_TEST (21877): min_ms=3.662
+07-07 23:03:53.276 I/DR_TEST (21877): max_ms=64.866
+07-07 23:03:53.277 I/DR_TEST (21877): fps=37.57
+07-07 23:03:53.277 I/DR_TEST (21877): TFLITE_INFERENCE summary
+07-07 23:03:53.277 I/DR_TEST (21877): count=100
+07-07 23:03:53.277 I/DR_TEST (21877): mean_ms=23.718
+07-07 23:03:53.277 I/DR_TEST (21877): median_ms=23.693
+07-07 23:03:53.277 I/DR_TEST (21877): p95_ms=24.018
+07-07 23:03:53.277 I/DR_TEST (21877): min_ms=23.538
+07-07 23:03:53.277 I/DR_TEST (21877): max_ms=24.365
+07-07 23:03:53.277 I/DR_TEST (21877): fps=42.16
+07-07 23:03:53.277 I/DR_TEST (21877): END_TO_END summary
+07-07 23:03:53.277 I/DR_TEST (21877): count=100
+07-07 23:03:53.277 I/DR_TEST (21877): mean_ms=120.781
+07-07 23:03:53.278 I/DR_TEST (21877): median_ms=118.462
+07-07 23:03:53.278 I/DR_TEST (21877): p95_ms=219.026
+07-07 23:03:53.278 I/DR_TEST (21877): min_ms=38.472
+07-07 23:03:53.278 I/DR_TEST (21877): max_ms=260.338
+07-07 23:03:53.278 I/DR_TEST (21877): fps=8.28
+07-07 23:03:53.303 I/DR_TEST (21877): Approx memory after test: 145121 KB PSS
+07-07 23:03:53.303 I/DR_TEST (21877): Approx memory change: 98482 KB PSS
+

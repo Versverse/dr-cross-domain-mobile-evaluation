@@ -1,0 +1,4 @@
+numpy
+pandas
+reportlab
+# Optional PNG rendering: pdf2image and Poppler

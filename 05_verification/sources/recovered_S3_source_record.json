@@ -1,0 +1,156 @@
+[
+  {
+    "file": "[source]/DR_end_Manuscript_FINAL_with_calibration.docx",
+    "sha256": "76e33f245555dfb399351b6e4069e8806952cff8ab029972a882f2953ca3072d",
+    "body_index": 54,
+    "text": "Note. Sensitivity and specificity are point estimates with 95% percentile bootstrap confidence intervals in parentheses. APTOS intervals used 2,000 image-level resamples (seed 42), whereas MESSIDOR-2 intervals used 2,000 paired-eye examination-cluster resamples (874 examinations; seed 43); the original unrounded APTOS-selected thresholds were held fixed. Thresholds define binary operating points and are distinct from the post hoc probability-calibration analysis reported in Figure 2 and Table S3.",
+    "next_elements": [
+      "Post Hoc Referable-DR Calibration and Error Analysis. For MobileViT-S, APTOS class-wise recalls for grades 0-4 were 97.0%, 68.9%, 83.0%, 35.9%, and 62.7%; the corresponding MESSIDOR-2 recalls were 89.5%, 16.7%, 24.2%, 12.0%, and 37.1%. On MESSIDOR-2, 214/270 Mild DR images (79.3%) were predicted as No DR and 54/75 Severe DR images (72.0%) as Moderate DR. Referable-DR prevalence versus mean predicted risk was 40.65% versus 39.06% on APTOS and 26.20% versus 15.74% on MESSIDOR-2. External Brier score was 0.1364 (95% CI 0.1204-0.1527), ECE 0.1051 (0.0858-0.1265), calibration intercept 1.43 (1.20-1.65), and slope 0.69 (0.62-0.79), indicating systematic underestimation and overly dispersed predictions. Figure 2 and Table S3 summarize this post hoc exploratory analysis.",
+      ""
+    ]
+  },
+  {
+    "file": "[source]/DR_end_Manuscript_FINAL_with_calibration.docx",
+    "sha256": "76e33f245555dfb399351b6e4069e8806952cff8ab029972a882f2953ca3072d",
+    "body_index": 55,
+    "text": "Post Hoc Referable-DR Calibration and Error Analysis. For MobileViT-S, APTOS class-wise recalls for grades 0-4 were 97.0%, 68.9%, 83.0%, 35.9%, and 62.7%; the corresponding MESSIDOR-2 recalls were 89.5%, 16.7%, 24.2%, 12.0%, and 37.1%. On MESSIDOR-2, 214/270 Mild DR images (79.3%) were predicted as No DR and 54/75 Severe DR images (72.0%) as Moderate DR. Referable-DR prevalence versus mean predicted risk was 40.65% versus 39.06% on APTOS and 26.20% versus 15.74% on MESSIDOR-2. External Brier score was 0.1364 (95% CI 0.1204-0.1527), ECE 0.1051 (0.0858-0.1265), calibration intercept 1.43 (1.20-1.65), and slope 0.69 (0.62-0.79), indicating systematic underestimation and overly dispersed predictions. Figure 2 and Table S3 summarize this post hoc exploratory analysis.",
+    "next_elements": [
+      "",
+      "Figure 2. Post hoc cross-domain five-class error and referable-DR calibration analysis for MobileViT-S. Panels A and B are confusion matrices; cells show counts and percentages of each reference-standard row. Panels C and D show 10 equal-frequency reliability bins comparing mean predicted referable-DR risk (sum of class 2-4 probabilities) with the observed referable fraction; vertical bars are Wilson 95% confidence intervals and the diagonal represents perfect calibration. APTOS included 733 images and MESSIDOR-2 included 1,744 gradable images. This analysis was post hoc and exploratory."
+    ]
+  },
+  {
+    "file": "[source]/DR_end_Manuscript_FINAL_with_calibration.docx",
+    "sha256": "76e33f245555dfb399351b6e4069e8806952cff8ab029972a882f2953ca3072d",
+    "body_index": 58,
+    "text": "Table S3. Post hoc MobileViT-S referable-DR calibration summary",
+    "next_elements": [
+      "MetricAPTOS tuning/validationMESSIDOR-2 externalAnalyzed sample733 images1,744 images; 874 examinationsObserved referable prevalence40.65%26.20%Mean predicted referable risk39.06%15.74%Brier score0.0501 (0.0395-0.0604)0.1364 (0.1204-0.1527)ECE, 10 equal-frequency bins0.0341 (0.0202-0.0488)0.1051 (0.0858-0.1265)Calibration intercept0.30 (-0.00 to 0.59)1.43 (1.20-1.65)Calibration slope1.07 (0.92-1.34)0.69 (0.62-0.79)",
+      "Note. Values in parentheses are 95% percentile bootstrap confidence intervals from 2,000 resamples. APTOS used image-level resampling (seed 44). MESSIDOR-2 used paired-eye examination-cluster resampling (874 examinations; seed 45). ECE = expected calibration error. The calibration intercept was estimated with the calibration slope fixed at 1; the slope was estimated in a separate logistic recalibration model with a free intercept. No recalibration was fitted or transferred."
+    ]
+  },
+  {
+    "file": "[source]/DR_end_Manuscript_FINAL_with_calibration.docx",
+    "sha256": "76e33f245555dfb399351b6e4069e8806952cff8ab029972a882f2953ca3072d",
+    "body_index": 59,
+    "text": "MetricAPTOS tuning/validationMESSIDOR-2 externalAnalyzed sample733 images1,744 images; 874 examinationsObserved referable prevalence40.65%26.20%Mean predicted referable risk39.06%15.74%Brier score0.0501 (0.0395-0.0604)0.1364 (0.1204-0.1527)ECE, 10 equal-frequency bins0.0341 (0.0202-0.0488)0.1051 (0.0858-0.1265)Calibration intercept0.30 (-0.00 to 0.59)1.43 (1.20-1.65)Calibration slope1.07 (0.92-1.34)0.69 (0.62-0.79)",
+    "rows": [
+      [
+        "Metric",
+        "APTOS tuning/validation",
+        "MESSIDOR-2 external"
+      ],
+      [
+        "Analyzed sample",
+        "733 images",
+        "1,744 images; 874 examinations"
+      ],
+      [
+        "Observed referable prevalence",
+        "40.65%",
+        "26.20%"
+      ],
+      [
+        "Mean predicted referable risk",
+        "39.06%",
+        "15.74%"
+      ],
+      [
+        "Brier score",
+        "0.0501 (0.0395-0.0604)",
+        "0.1364 (0.1204-0.1527)"
+      ],
+      [
+        "ECE, 10 equal-frequency bins",
+        "0.0341 (0.0202-0.0488)",
+        "0.1051 (0.0858-0.1265)"
+      ],
+      [
+        "Calibration intercept",
+        "0.30 (-0.00 to 0.59)",
+        "1.43 (1.20-1.65)"
+      ],
+      [
+        "Calibration slope",
+        "1.07 (0.92-1.34)",
+        "0.69 (0.62-0.79)"
+      ]
+    ],
+    "next_elements": [
+      "Note. Values in parentheses are 95% percentile bootstrap confidence intervals from 2,000 resamples. APTOS used image-level resampling (seed 44). MESSIDOR-2 used paired-eye examination-cluster resampling (874 examinations; seed 45). ECE = expected calibration error. The calibration intercept was estimated with the calibration slope fixed at 1; the slope was estimated in a separate logistic recalibration model with a free intercept. No recalibration was fitted or transferred.",
+      "TFLite Verification and Inference-Only Benchmarking. For each model, PyTorch and TFLite top-1 predictions agreed for 50/50 real images and 10/10 seeded random tensors. Across the real images, mean absolute logit differences ranged from 1.71 × 10⁻⁶ to 1.40 × 10⁻⁵, and maximum absolute differences ranged from 8.58 × 10⁻⁶ to 8.96 × 10⁻⁵; all were below the 1 × 10⁻³ tolerance. These results support numerical fidelity on the evaluated inputs but do not demonstrate equivalence for all possible inputs. On the single benchmark device, MobileNetV3-Large had the lowest measured mean latency, EfficientNet-Lite0 had the smallest model file, and ResNet-50 had the largest file and highest measured latency. The device was a Huawei DBR-W00 running Android 12 on a Snapdragon 865-class platform."
+    ]
+  },
+  {
+    "file": "[source]/DR_end_Manuscript_FINAL_with_calibration.docx",
+    "sha256": "76e33f245555dfb399351b6e4069e8806952cff8ab029972a882f2953ca3072d",
+    "body_index": 79,
+    "text": "Reporting domainManuscript locationReported scope or explicit limitationData sources and partitionsMethods; Table 1Fixed APTOS image-level split; tuning reuse; exact-hash audit with post hoc exclusion analysis; no verified APTOS patient identifier. MESSIDOR-2 left-right pairing was used for examination-cluster bootstrapReference standardMethodsOfficial MESSIDOR-2 has no labels; third-party three-specialist adjudicated file used for 1,744 imagesModel and trainingMethodsArchitectures, initialization, loss, sampler, augmentation, optimizer, seed, early stopping, and checkpoint metricEvaluation and uncertaintyMethods; Tables 2–5Metric definitions and 2,000-resample percentile bootstrap; MESSIDOR-2 resampled by paired-eye examination clusterThresholds vs calibrationMethods; Results; Table 5; Figure 2; Table S3APTOS-selected thresholds applied unchanged; separate post hoc MobileViT-S reliability diagram, Brier score, ECE, and calibration intercept/slope with cluster-aware external uncertaintyConversion fidelityMethods; Table 6Input composition, comparison endpoints, tolerance, and PyTorch-versus-final-TFLite scopeDevice evaluationMethods; Tables 6–7Benchmark-only inference separated from Android end-to-end application timingClinical, reader, and fairness evaluationDiscussionNot assessedData and code availabilityAvailability statementDatasets public under source terms; study artifacts available on request; no public DOI",
+    "rows": [
+      [
+        "Reporting domain",
+        "Manuscript location",
+        "Reported scope or explicit limitation"
+      ],
+      [
+        "Data sources and partitions",
+        "Methods; Table 1",
+        "Fixed APTOS image-level split; tuning reuse; exact-hash audit with post hoc exclusion analysis; no verified APTOS patient identifier. MESSIDOR-2 left-right pairing was used for examination-cluster bootstrap"
+      ],
+      [
+        "Reference standard",
+        "Methods",
+        "Official MESSIDOR-2 has no labels; third-party three-specialist adjudicated file used for 1,744 images"
+      ],
+      [
+        "Model and training",
+        "Methods",
+        "Architectures, initialization, loss, sampler, augmentation, optimizer, seed, early stopping, and checkpoint metric"
+      ],
+      [
+        "Evaluation and uncertainty",
+        "Methods; Tables 2–5",
+        "Metric definitions and 2,000-resample percentile bootstrap; MESSIDOR-2 resampled by paired-eye examination cluster"
+      ],
+      [
+        "Thresholds vs calibration",
+        "Methods; Results; Table 5; Figure 2; Table S3",
+        "APTOS-selected thresholds applied unchanged; separate post hoc MobileViT-S reliability diagram, Brier score, ECE, and calibration intercept/slope with cluster-aware external uncertainty"
+      ],
+      [
+        "Conversion fidelity",
+        "Methods; Table 6",
+        "Input composition, comparison endpoints, tolerance, and PyTorch-versus-final-TFLite scope"
+      ],
+      [
+        "Device evaluation",
+        "Methods; Tables 6–7",
+        "Benchmark-only inference separated from Android end-to-end application timing"
+      ],
+      [
+        "Clinical, reader, and fairness evaluation",
+        "Discussion",
+        "Not assessed"
+      ],
+      [
+        "Data and code availability",
+        "Availability statement",
+        "Datasets public under source terms; study artifacts available on request; no public DOI"
+      ]
+    ],
+    "next_elements": [
+      "Note. CLAIM = Checklist for Artificial Intelligence in Medical Imaging.",
+      "Reporting scope was mapped to applicable CLAIM 2024 domains. Table S2 identifies both reported evidence and unavailable evidence; it is not a numerical compliance assessment (Tejani et al., 2024). The post hoc calibration analysis was additionally described using TRIPOD+AI terminology for discrimination, calibration, and model evaluation (Collins et al., 2024)."
+    ]
+  },
+  {
+    "file": "[source]/Toward Deployable Ophthalmic AI_Revision.docx",
+    "sha256": "e28c29b332dae2464da55c4bcc881bbf4e9dddc5b94450a4d860720377d96edf",
+    "body_index": 56,
+    "text": "Note. Sensitivity and specificity are point estimates with 95% percentile bootstrap confidence intervals in parentheses. APTOS intervals used 2,000 image-level resamples (seed 42), whereas MESSIDOR-2 intervals used 2,000 paired-eye examination-cluster resamples (874 examinations; seed 43); the original unrounded APTOS-selected thresholds were held fixed. Thresholds define binary operating points and are distinct from the post hoc probability-calibration analysis reported in Figure 2 and Table S3.",
+    "next_elements": [
+      "The post hoc MobileViT-S analysis localized the external change. APTOS recalls for grades 0-4 were 97.0%, 68.9%, 83.0%, 35.9%, and 62.7%, compared with 89.5%, 16.7%, 24.2%, 12.0%, and 37.1% on MESSIDOR-2. On MESSIDOR-2, 214/270 Mild DR images were predicted as No DR and 54/75 Severe DR images as Moderate DR. Observed referable prevalence versus mean predicted risk was 40.65% versus 39.06% on APTOS and 26.20% versus 15.74% on MESSIDOR-2. The external Brier score was 0.1364 (95% CI, 0.1204-0.1527), ECE was 0.1051 (0.0858-0.1265), calibration intercept was 1.43 (1.20-1.65), and slope was 0.69 (0.62-0.79), indicating systematic underestimation and overly dispersed predictions.",
+      ""
+    ]
+  }
+]

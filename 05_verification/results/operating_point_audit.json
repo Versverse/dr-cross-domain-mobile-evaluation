@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-14",
+  "scope": "New arithmetic verification, no inference or training. All four Table 5 thresholds (4 decimals) and all 16 sensitivity/specificity point estimates (2 decimals) match. Original historical code and bootstrap intervals are not verified by this script.",
+  "selection_rule": "Choose largest APTOS referable risk threshold with empirical sensitivity at least target; include p>=threshold. Selection uses source labels only; apply unchanged to MESSIDOR-2.",
+  "risk": "sum(prob_2,prob_3,prob_4)",
+  "source_sha256": {
+    "aptos_val_all_predictions_combined.csv": "2134ffa79e5c3766100780abb1694f49e64b73bfbd01d77dddbc16d66f2cf8cb",
+    "messidor2_all_predictions_combined.csv": "1e8a209c5aa4922a781ddfc8574f376a926968929aa59fa4ee4f59c026e94c4c"
+  },
+  "results": [
+    {
+      "target_APTOS_sensitivity": 0.9,
+      "full_precision_threshold": 0.5398757969960569,
+      "APTOS_TP": 269,
+      "APTOS_positive_N": 298,
+      "APTOS_TN": 416,
+      "APTOS_negative_N": 435,
+      "APTOS_sensitivity": 0.9026845637583892,
+      "APTOS_specificity": 0.9563218390804598,
+      "MESSIDOR2_TP": 177,
+      "MESSIDOR2_positive_N": 457,
+      "MESSIDOR2_TN": 1257,
+      "MESSIDOR2_negative_N": 1287,
+      "MESSIDOR2_sensitivity": 0.387308533916849,
+      "MESSIDOR2_specificity": 0.9766899766899767
+    },
+    {
+      "target_APTOS_sensitivity": 0.95,
+      "full_precision_threshold": 0.38024454819969816,
+      "APTOS_TP": 284,
+      "APTOS_positive_N": 298,
+      "APTOS_TN": 403,
+      "APTOS_negative_N": 435,
+      "APTOS_sensitivity": 0.9530201342281879,
+      "APTOS_specificity": 0.9264367816091954,
+      "MESSIDOR2_TP": 209,
+      "MESSIDOR2_positive_N": 457,
+      "MESSIDOR2_TN": 1227,
+      "MESSIDOR2_negative_N": 1287,
+      "MESSIDOR2_sensitivity": 0.4573304157549234,
+      "MESSIDOR2_specificity": 0.9533799533799534
+    },
+    {
+      "target_APTOS_sensitivity": 0.98,
+      "full_precision_threshold": 0.2537982107605784,
+      "APTOS_TP": 293,
+      "APTOS_positive_N": 298,
+      "APTOS_TN": 397,
+      "APTOS_negative_N": 435,
+      "APTOS_sensitivity": 0.9832214765100671,
+      "APTOS_specificity": 0.9126436781609195,
+      "MESSIDOR2_TP": 252,
+      "MESSIDOR2_positive_N": 457,
+      "MESSIDOR2_TN": 1192,
+      "MESSIDOR2_negative_N": 1287,
+      "MESSIDOR2_sensitivity": 0.5514223194748359,
+      "MESSIDOR2_specificity": 0.9261849261849262
+    },
+    {
+      "target_APTOS_sensitivity": 0.99,
+      "full_precision_threshold": 0.13782322197221203,
+      "APTOS_TP": 296,
+      "APTOS_positive_N": 298,
+      "APTOS_TN": 379,
+      "APTOS_negative_N": 435,
+      "APTOS_sensitivity": 0.9932885906040269,
+      "APTOS_specificity": 0.871264367816092,
+      "MESSIDOR2_TP": 304,
+      "MESSIDOR2_positive_N": 457,
+      "MESSIDOR2_TN": 1135,
+      "MESSIDOR2_negative_N": 1287,
+      "MESSIDOR2_sensitivity": 0.6652078774617067,
+      "MESSIDOR2_specificity": 0.8818958818958819
+    }
+  ]
+}

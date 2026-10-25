@@ -1,0 +1,89 @@
+{
+  "unit": "ms",
+  "source_fields": [
+    "image_load_ms",
+    "opencv_preprocess_ms",
+    "input_conversion_ms",
+    "tflite_inference_ms",
+    "output_decode_ms"
+  ],
+  "arithmetic": "Unallocated time = independently recorded end_to_end_ms minus sum of the five recorded component fields. No process attribution is made for the residual.",
+  "aggregation": "Each bar component is an arithmetic mean over 100 images. Shares are component means divided by measured total mean, not the mean of per-image percentages.",
+  "device": "Huawei DBR-W00; Android 12; QTI SM8250/Snapdragon 865-class; four TFLite threads; XNNPACK enabled",
+  "sample": "The same 100 APTOS tuning/validation images for both models, 20 per grade; five warm-up inference calls before the measured images.",
+  "models": [
+    {
+      "model": "mobilenetv3_large",
+      "display_name": "MobileNetV3-Large",
+      "source": {
+        "path": "[source]/android_e2e_mobilenetv3_large_log.txt",
+        "sha256": "d4efc639ab216fa3bd964cba5eb9219918bd61b7731852505914e0f56f13e341",
+        "bytes": 36344
+      },
+      "n": 100,
+      "unique_image_ids": 100,
+      "grade_counts": {
+        "0_No_DR": 20,
+        "1_Mild": 20,
+        "2_Moderate": 20,
+        "3_Severe": 20,
+        "4_Proliferative_DR": 20
+      },
+      "mean_components_ms": {
+        "image_load_ms": 66.67474,
+        "opencv_preprocess_ms": 26.78361,
+        "input_conversion_ms": 3.63356,
+        "tflite_inference_ms": 14.72205,
+        "output_decode_ms": 0.043789999999999996
+      },
+      "sum_component_means_ms": 111.85775,
+      "mean_total_ms": 111.99542,
+      "mean_unallocated_time_ms": 0.1376699999999997,
+      "components_equal_total_per_image": false,
+      "residual_range_ms": [
+        0.010999999999967258,
+        3.1829999999999927
+      ],
+      "load_and_preprocessing_share_percent": 83.44836779932608,
+      "inference_share_percent": 13.145225045809909,
+      "row_addition_check_max_error_ms": 0.0
+    },
+    {
+      "model": "efficientnet_lite0",
+      "display_name": "EfficientNet-Lite0",
+      "source": {
+        "path": "[source]/android_e2e_efficientnet_lite0_log.txt",
+        "sha256": "dbae0f2e2531cc9bd31c30c3f237574e5301104de281d338115133cd87c6e068",
+        "bytes": 36364
+      },
+      "n": 100,
+      "unique_image_ids": 100,
+      "grade_counts": {
+        "0_No_DR": 20,
+        "1_Mild": 20,
+        "2_Moderate": 20,
+        "3_Severe": 20,
+        "4_Proliferative_DR": 20
+      },
+      "mean_components_ms": {
+        "image_load_ms": 66.63705,
+        "opencv_preprocess_ms": 26.61629,
+        "input_conversion_ms": 3.61344,
+        "tflite_inference_ms": 23.71789,
+        "output_decode_ms": 0.042499999999999996
+      },
+      "sum_component_means_ms": 120.62717,
+      "mean_total_ms": 120.78095,
+      "mean_unallocated_time_ms": 0.15378000000000022,
+      "components_equal_total_per_image": false,
+      "residual_range_ms": [
+        0.01099999999999568,
+        5.068999999999988
+      ],
+      "load_and_preprocessing_share_percent": 77.20864921165135,
+      "inference_share_percent": 19.63711164715959,
+      "row_addition_check_max_error_ms": 0.0
+    }
+  ],
+  "same_image_id_set_for_both_models": true
+}

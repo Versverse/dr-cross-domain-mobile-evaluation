@@ -1,0 +1,57 @@
+model: resnet50
+tflite_filename: aptos_fixedsplit_resnet50_float32.tflite
+local_path: [source]/Desktop\fixed_DR\dr_fixed_split_tflite_exports\tflite\aptos_fixedsplit_resnet50_float32.tflite
+remote_path: /data/local/tmp/aptos_fixedsplit_resnet50_float32.tflite
+started: 2026-07-07 22:28:39
+ended: 2026-07-07 22:28:44
+command: [source]/AppData\Local\Android\Sdk\platform-tools\adb.exe shell /data/local/tmp/benchmark_model --graph=/data/local/tmp/aptos_fixedsplit_resnet50_float32.tflite --num_threads=4 --use_xnnpack=true --warmup_runs=5 --num_runs=50
+
+===== adb push =====
+adb.exe : [source]/Desktop\fixed_DR\dr_fixed_split_tflite_exports\tflite\aptos_fixedsplit_resnet50_float32.tflite
+: 1 file pushed, 0 skipped. 26.6 MB/s (93995732 bytes in 3.366s)
+At [source]/Documents\Codex\2026-06-29\i-have-a-processed-aptos-2019\work\run_fixedsplit_android_benchmark.ps1:38
+ char:19
++         $result = & $adb @ArgsList 2>&1
++                   ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([source]/...ytes in 3.366s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+===== remote ls =====
+-rw-rw-rw- 1 shell shell 93995732 2026-07-07 21:58 /data/local/tmp/aptos_fixedsplit_resnet50_float32.tflite
+
+===== benchmark_model raw output =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [4]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/data/local/tmp/aptos_fixedsplit_resnet50_float32.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [4]
+INFO: Use xnnpack: [1]
+INFO: Loaded model /data/local/tmp/aptos_fixedsplit_resnet50_float32.tflite
+adb.exe : INFO: Initialized TensorFlow Lite runtime.
+At [source]/Documents\Codex\2026-06-29\i-have-a-processed-aptos-2019\work\run_fixedsplit_android_benchmark.ps1:24
+3 char:28
++         $benchmarkOutput = & $adb @benchmarkArgs 2>&1
++                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO: Initializ...w Lite runtime.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+VERBOSE: Replacing 79 out of 80 node(s) with delegate (TfLiteXNNPackDelegate) node, yielding 3 partitions for subgraph 
+0.
+INFO: XNNPACK delegate created.
+INFO: Explicitly applied XNNPACK delegate, and the model graph will be partially executed by the delegate w/ 2 delegate kernels.
+INFO: The input model file size (MB): 93.9957
+INFO: Initialized session in 241.844ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=181935 curr=80154 min=79805 max=181935 avg=103422 std=39494 p5=79805 median=83409 p95=181935
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=80957 curr=84911 min=79903 max=105521 avg=82831.6 std=5702 p5=80347 median=81049 p95=102470
+
+INFO: Inference timings in us: Init: 241844, First inference: 181935, Warmup (avg): 103422, Inference (avg): 82831.6
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=201.41 overall=201.41
+

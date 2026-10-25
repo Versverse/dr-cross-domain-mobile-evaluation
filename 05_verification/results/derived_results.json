@@ -1,0 +1,76 @@
+{
+  "threshold_transfer": {
+    "source": {
+      "path": "[source]/verified_full_precision_operating_points.csv",
+      "sha256": "263a6e1b6f38c24a0137a4f1dc3572f1adcfd632528607fe6d0a44fb4962d112",
+      "bytes": 790
+    },
+    "unit": "image",
+    "source_threshold_from": 0.5398757969960569,
+    "source_threshold_to": 0.13782322197221203,
+    "positive_N": 457,
+    "negative_N": 1287,
+    "TP_from": 177,
+    "TP_to": 304,
+    "FP_from": 30,
+    "FP_to": 152,
+    "additional_TP": 127,
+    "additional_FP": 122
+  },
+  "ablation": {
+    "sources": [
+      {
+        "path": "[source]/mobilenetv3_old_order_ablation_summary (1) (1).csv",
+        "sha256": "93df7c08819ef245d9309a36a9133e9fa6f3c8d19a77e61a7ec3c04c9fbc8387",
+        "bytes": 4032
+      },
+      {
+        "path": "[source]/mobilenetv3_missing_strategy_summary_with_existing_full (1).csv",
+        "sha256": "26c4aa55afae8c1a58aa037beadc1adc3ec0aa11a8cedfdff9c04428792b58bb",
+        "bytes": 3248
+      }
+    ],
+    "comparison": "Recorded single-run configurations on the same 733-image APTOS tuning/validation subset.",
+    "baseline_to_CE_augmentation": {
+      "macro_f1_percentage_point_difference": 2.25137401274742,
+      "Severe_recall_percentage_point_difference": 23.076923076923077,
+      "Proliferative_recall_percentage_point_difference": -10.169491525423735
+    },
+    "CE_aug_sampler_to_focal_aug_sampler": {
+      "accuracy_percentage_point_difference": 1.9099590723055893,
+      "macro_f1_percentage_point_difference": 2.838641928164054,
+      "QWK_difference": 0.0241583747470262,
+      "referable_AUC_difference": 0.004809843400447433
+    }
+  },
+  "referral_error_structure": {
+    "source": {
+      "path": "[source]/MESSIDOR-2_mobilevit_confusion.csv",
+      "sha256": "0ecde30588c03a5770b7f8f1ec8f31fd41d049a4ad985ee36fe3b855d5b34f48",
+      "bytes": 82
+    },
+    "Moderate_FN": 261,
+    "all_referable_FN": 272,
+    "Moderate_share_percent": 95.95588235294117
+  },
+  "risk_gap": {
+    "unit": "percentage points",
+    "calculation": "Observed binary prevalence minus mean summed class-2-to-4 risk, using unrounded retained values.",
+    "sources": [
+      {
+        "path": "[source]/aptos_val_all_predictions_combined.csv",
+        "sha256": "2134ffa79e5c3766100780abb1694f49e64b73bfbd01d77dddbc16d66f2cf8cb",
+        "bytes": 694726
+      },
+      {
+        "path": "[source]/messidor2_all_predictions_combined.csv",
+        "sha256": "1e8a209c5aa4922a781ddfc8574f376a926968929aa59fa4ee4f59c026e94c4c",
+        "bytes": 1752761
+      }
+    ],
+    "values": {
+      "APTOS": 1.5970212701894249,
+      "MESSIDOR2": 10.46439608552312
+    }
+  }
+}
