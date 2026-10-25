@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": {
+    "scalar_recount_all_operating_points": 32,
+    "source_threshold_largest_attaining_target_with_ties": true,
+    "all_threshold_bootstrap_draws_match_independent_multiplicity_counts": true,
+    "Figure2_all_external_cluster_draws_match_independent_multiplicity_counts": true,
+    "external_images": 1744,
+    "external_examinations": 874,
+    "two_image_examinations": 870,
+    "one_image_examinations": 4,
+    "independent_bisection_intercept_design_matrix_slope_and_scalar_brier_points": 8
+  },
+  "scripts_sha256": {
+    "extend_statistics.py": "a22dadcf48a91a12e9f509fa64236ee56bf4dd54aabf770b1ea5682a8203dff7",
+    "verify_and_prepare_manuscript.py": "7267e4071d9018e841bed263a6afcf795b23f8ac402a526619f9d840c34dc370"
+  }
+}
