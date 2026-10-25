@@ -1,0 +1,40 @@
+{
+  "annotation_source_file": "[source]/messidor_data.csv",
+  "source_sha256": "bb8bbd82eb4bfddc8a0eb9aa45d84274d814e913534f8027f6a4ff0a310fda72",
+  "retained_manifest": "[source]/messidor2_manifest.csv",
+  "manifest_sha256": "0003c5efaafa0d80b2b69ef9f8d3df04d7fd075b11875bcd18329f055593529b",
+  "annotation_rows": 1748,
+  "included_images": 1744,
+  "excluded_images": 4,
+  "all_included_labels_match": true,
+  "grade_field": "adjudicated_dr_grade",
+  "inclusion_rule": "adjudicated_gradable == 1 and adjudicated_dr_grade is not missing",
+  "excluded_records": [
+    {
+      "image_id": "20060411_58550_0200_PP.png",
+      "adjudicated_dr_grade": "missing",
+      "adjudicated_dme": "missing",
+      "adjudicated_gradable": 0
+    },
+    {
+      "image_id": "IM002385.jpg",
+      "adjudicated_dr_grade": "missing",
+      "adjudicated_dme": "missing",
+      "adjudicated_gradable": 0
+    },
+    {
+      "image_id": "IM003718.jpg",
+      "adjudicated_dr_grade": "missing",
+      "adjudicated_dme": "missing",
+      "adjudicated_gradable": 0
+    },
+    {
+      "image_id": "IM004176.jpg",
+      "adjudicated_dr_grade": "missing",
+      "adjudicated_dme": "missing",
+      "adjudicated_gradable": 0
+    }
+  ],
+  "historical_download_revision": "Not recorded in the retained local CSV; its exact retained contents are identified by SHA-256.",
+  "new_training_or_inference": false
+}
