@@ -1,0 +1,29 @@
+{
+  "portable_manifest_sha256": {
+    "full": "b565a547565cdc67369d74a210207292a581b58a0eec84043291315b4e82dbc9",
+    "android": "0cb35818832073393cde983f190c65480a7553ea0e5af9bf8a19ecd0cc940ad7"
+  },
+  "original_local_manifest_sha256": {
+    "full": "b75f55c6efa35f4241c74f0ecc29388a8b3352cb3512ef16adb3ca94055a8438",
+    "android": "262b4315af547332a1672f36d32a7fa742d3270e7e50a5bb73664ab6cb639809"
+  },
+  "full_N": 2477,
+  "android_N": 218,
+  "counts": {
+    "APTOS": {
+      "0": 20,
+      "1": 20,
+      "2": 26,
+      "3": 20,
+      "4": 22
+    },
+    "MESSIDOR2": {
+      "0": 25,
+      "1": 22,
+      "2": 23,
+      "3": 20,
+      "4": 20
+    }
+  },
+  "transformation": "Path-only sharing adaptation; raw_path is relative to the configured dataset raw root, processed_path to its processed root. Exact row order, membership, labels, selection reasons, and available image hashes are unchanged. These CSV identities differ from the original local CSV hashes because private paths were removed."
+}

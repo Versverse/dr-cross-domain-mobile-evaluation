@@ -1,0 +1,37 @@
+{
+  "new_analysis": true,
+  "N_frozen_images": 218,
+  "groups": {
+    "APTOS_.png": {
+      "N": 108,
+      "identical_online_to_retained_N": 108,
+      "max_online_to_retained_RGB_diff": 0,
+      "identical_after_original_extension_encode_decode_N": 108,
+      "raw_vs_retained_top1_changes": {
+        "efficientnet_lite0": 0,
+        "mobilenetv3_large": 0
+      }
+    },
+    "MESSIDOR2_.jpg": {
+      "N": 36,
+      "identical_online_to_retained_N": 0,
+      "max_online_to_retained_RGB_diff": 40,
+      "identical_after_original_extension_encode_decode_N": 36,
+      "raw_vs_retained_top1_changes": {
+        "efficientnet_lite0": 5,
+        "mobilenetv3_large": 1
+      }
+    },
+    "MESSIDOR2_.png": {
+      "N": 74,
+      "identical_online_to_retained_N": 74,
+      "max_online_to_retained_RGB_diff": 0,
+      "identical_after_original_extension_encode_decode_N": 74,
+      "raw_vs_retained_top1_changes": {
+        "efficientnet_lite0": 0,
+        "mobilenetv3_large": 0
+      }
+    }
+  },
+  "meaning": "Raw online preprocessing omits the historical offline file-saving stage. Reproduce that stage using the original extension/default OpenCV encoding then PIL decode; identical recovered pixels identify the encoding stage. Direct raw results and encoded-file results stay separate. This subset is for paired consistency, not external population accuracy."
+}

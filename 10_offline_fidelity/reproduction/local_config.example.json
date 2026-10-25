@@ -1,0 +1,102 @@
+{
+  "created": "2026-10-16",
+  "status": "portable_configuration_example_not_an_executed_run",
+  "models": {
+    "efficientnet_lite0": {
+      "display": "EfficientNet-Lite0",
+      "timm_name": "efficientnet_lite0",
+      "checkpoint": "weights/best_fixedsplit_efficientnet_lite0.pth",
+      "checkpoint_sha256": "36f84a1c1eb3957dc2ebbc80676b4eac695827b3f192bc28f1155d8988f8aa1d",
+      "tflite": "../../03_android/AptosEdgeTest/app/src/main/assets/aptos_fixedsplit_efficientnet_lite0_float32.tflite",
+      "tflite_sha256": "a7b9b3f2aebab0c657753611f2fd711f0d88c28b600a1df433f423a53601165a"
+    },
+    "mobilenetv3_large": {
+      "display": "MobileNetV3-Large",
+      "timm_name": "mobilenetv3_large_100",
+      "checkpoint": "weights/best_fixedsplit_mobilenetv3_large.pth",
+      "checkpoint_sha256": "8d32bde3acda40028abf42624848c1d49016edac4f5cf4cd289737f2e7e46ac4",
+      "tflite": "../../03_android/AptosEdgeTest/app/src/main/assets/aptos_fixedsplit_mobilenetv3_large_float32.tflite",
+      "tflite_sha256": "4152e3df506aaa0642954dc413f5522819c891a8de6ce4e8e5fa5d713d7534be"
+    },
+    "mobilevit_s": {
+      "display": "MobileViT-S",
+      "timm_name": "mobilevit_s",
+      "checkpoint": "weights/best_fixedsplit_mobilevit_s.pth",
+      "checkpoint_sha256": "6728bc9376d0e72bd16ee10f9d24cb1db78a39a21c0b60ea58a77313d983162e",
+      "tflite": "weights/aptos_fixedsplit_mobilevit_s_float32.tflite",
+      "tflite_sha256": "30dea6548c863cac423682ecf44893be7b60779268eb42368ab824ad4c9ddf2e"
+    },
+    "resnet50": {
+      "display": "ResNet-50",
+      "timm_name": "resnet50",
+      "checkpoint": "weights/best_fixedsplit_resnet50.pth",
+      "checkpoint_sha256": "b20926661aeb61b73dd47bb91875bebf0ce2d690a432d1603be9d09d2dd74f3f",
+      "tflite": "weights/aptos_fixedsplit_resnet50_float32.tflite",
+      "tflite_sha256": "7433ddb926ef1a8c1e07f2b3f0f072290b6a22d67ac21d234453e167d1c054d6"
+    }
+  },
+  "full_manifest": "full_inputs.csv",
+  "android_manifest": "android_inputs.csv",
+  "thresholds": {
+    "efficientnet_lite0": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.5422741621732711,
+      "source_sens_95": 0.286680217621324,
+      "source_sens_98": 0.07715187933445117,
+      "source_sens_99": 0.0260117471480042
+    },
+    "mobilenetv3_large": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.7014254357563914,
+      "source_sens_95": 0.4053929056390188,
+      "source_sens_98": 0.24814162035181644,
+      "source_sens_99": 0.0727574325792373
+    },
+    "mobilevit_s": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.5398757969960569,
+      "source_sens_95": 0.38024454819969816,
+      "source_sens_98": 0.2537982107605784,
+      "source_sens_99": 0.13782322197221203
+    },
+    "resnet50": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.6041934192180632,
+      "source_sens_95": 0.4620040687732397,
+      "source_sens_98": 0.3251692637859377,
+      "source_sens_99": 0.2814733376726506
+    }
+  },
+  "threshold_rule": "sum(prob2,prob3,prob4)>=fixed threshold; source sensitivity thresholds choose largest retained APTOS threshold meeting target; no M2 threshold tuning",
+  "source_prediction_csv": {
+    "APTOS": {
+      "path": "../../05_verification/inputs/aptos_val_all_predictions_combined.csv",
+      "sha256": "ce1725e410343198bf7cb7e4415cad0549d291d2afbce11025df03f3c155a40f"
+    },
+    "MESSIDOR2": {
+      "path": "../../05_verification/inputs/messidor2_all_predictions_combined.csv",
+      "sha256": "2b4ab93e5aedffbf072ffc6dbd7f33f172f8ac78c2febd7f25cd40a0d17df87e"
+    }
+  },
+  "full_N": 2477,
+  "android_N": 218,
+  "android_selection": "100 historical APTOS IDs plus seed20261016 M2 20/grade; append closest retained-risk image per fixed threshold for two mobile models. Outcome-independent reproducibility/decision-boundary coverage, not a new prevalence-representative accuracy sample.",
+  "input_contract": "decoded existing preprocessed image RGB uint8 -> float32 NHWC /255. ImageNet normalization occurs inside PyTorch wrapper/final TFLite graph. Raw Android arm applies online preprocessing without offline JPEG re-encoding.",
+  "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894",
+  "canonical_retained_risks_sha256": "318d36ed7670ce8a0b2f5de5cb875a68579db10e8c58d1286c064c87e6471a03",
+  "threshold_numeric_note": "Final decision tables use the canonical frozen JSON and per-image retained risks used by the statistical extension. Initial CSV/native parse differs by at most floating-point ulps. Saved inference logits/scores are unchanged; all final decisions recomputed without retuning.",
+  "data_roots": {
+    "APTOS": {
+      "raw": "data/APTOS/raw",
+      "processed": "data/APTOS/processed"
+    },
+    "MESSIDOR2": {
+      "raw": "data/MESSIDOR2/raw",
+      "processed": "data/MESSIDOR2/processed"
+    }
+  },
+  "frozen_thresholds": "../../07_statistics/results_executed_20261016/frozen_thresholds_20261016.json",
+  "canonical_retained_risks": "../../07_statistics/results_executed_20261016/canonical_retained_risks_20261016.csv",
+  "input_freeze": "input_freeze.portable.json",
+  "path_note": "All configured relative paths resolve from this JSON file; absolute authorized paths are also accepted. Do not edit fixed manifest identities or threshold values."
+}

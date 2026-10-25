@@ -1,0 +1,4 @@
+dataset,extension,N,identical_direct_pixels_N,identical_after_format_roundtrip_N,Lite0_top1_changes,MobileNet_top1_changes,max_RGB_diff
+APTOS,.png,108,108,108,0,0,0
+MESSIDOR2,.jpg,36,0,36,5,1,40
+MESSIDOR2,.png,74,74,74,0,0,0

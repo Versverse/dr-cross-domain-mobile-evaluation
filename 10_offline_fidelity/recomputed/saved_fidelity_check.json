@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "model_image_pairs": 5390,
+  "top1_matches": 5390,
+  "conversion_boundary_records": [
+    {
+      "model": "efficientnet_lite0",
+      "dataset": "APTOS",
+      "image_id": "e03e70bc8bba.png",
+      "rule": "source_sens_98",
+      "threshold": 0.07715187933445117
+    },
+    {
+      "model": "mobilevit_s",
+      "dataset": "APTOS",
+      "image_id": "e03e70bc8bba.png",
+      "rule": "source_sens_98",
+      "threshold": 0.2537982107605784
+    }
+  ],
+  "summary": [
+    {
+      "model": "efficientnet_lite0",
+      "dataset": "APTOS",
+      "N": 733,
+      "top1_matches": 733,
+      "maximum_absolute_logit_difference": 3.0517578125e-05,
+      "maximum_absolute_probability_difference": 6.361595422277322e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "model": "efficientnet_lite0",
+      "dataset": "MESSIDOR2",
+      "N": 1744,
+      "top1_matches": 1744,
+      "maximum_absolute_logit_difference": 2.753734588623047e-05,
+      "maximum_absolute_probability_difference": 4.215240390070818e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "model": "mobilenetv3_large",
+      "dataset": "APTOS",
+      "N": 733,
+      "top1_matches": 733,
+      "maximum_absolute_logit_difference": 0.000102996826171875,
+      "maximum_absolute_probability_difference": 6.418981224498577e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "model": "mobilenetv3_large",
+      "dataset": "MESSIDOR2",
+      "N": 1744,
+      "top1_matches": 1744,
+      "maximum_absolute_logit_difference": 8.392333984375e-05,
+      "maximum_absolute_probability_difference": 5.9164220619356556e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "model": "mobilevit_s",
+      "dataset": "APTOS",
+      "N": 108,
+      "top1_matches": 108,
+      "maximum_absolute_logit_difference": 7.808208465576172e-06,
+      "maximum_absolute_probability_difference": 2.20776848058879e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "model": "mobilevit_s",
+      "dataset": "MESSIDOR2",
+      "N": 110,
+      "top1_matches": 110,
+      "maximum_absolute_logit_difference": 7.3909759521484375e-06,
+      "maximum_absolute_probability_difference": 1.6086947655646888e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "model": "resnet50",
+      "dataset": "APTOS",
+      "N": 108,
+      "top1_matches": 108,
+      "maximum_absolute_logit_difference": 3.24249267578125e-05,
+      "maximum_absolute_probability_difference": 4.220769120377721e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "model": "resnet50",
+      "dataset": "MESSIDOR2",
+      "N": 110,
+      "top1_matches": 110,
+      "maximum_absolute_logit_difference": 3.057718276977539e-05,
+      "maximum_absolute_probability_difference": 7.039899675265193e-06,
+      "decision_changes_90_95_98_99": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

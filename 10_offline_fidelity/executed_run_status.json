@@ -1,0 +1,354 @@
+{
+  "status": "complete",
+  "new_experiment": true,
+  "training_performed": false,
+  "scope_by_model": {
+    "efficientnet_lite0": 2477,
+    "mobilenetv3_large": 2477,
+    "mobilevit_s": 218,
+    "resnet50": 218
+  },
+  "N_model_image_pairs": 5390,
+  "datasets_full": {
+    "APTOS": 733,
+    "MESSIDOR2": 1744
+  },
+  "datasets_selected": {
+    "APTOS": 108,
+    "MESSIDOR2": 110
+  },
+  "scope_rationale": "The completed conversion comparison contains 5,390 model-image pairs. EfficientNet-Lite0 and MobileNetV3-Large each cover 2,477 retained inputs (733 APTOS and 1,744 MESSIDOR-2). MobileViT-S and ResNet-50 each cover the frozen 218-image subset (108 APTOS and 110 MESSIDOR-2), spanning all five grades and source-threshold boundaries.",
+  "versions_by_model": {
+    "efficientnet_lite0": {
+      "torch": "2.8.0+cpu",
+      "torchvision": "0.23.0+cpu",
+      "timm": "1.0.15",
+      "numpy": "1.26.4",
+      "Pillow": "11.3.0",
+      "ai-edge-litert": "2.1.2"
+    },
+    "mobilenetv3_large": {
+      "torch": "2.8.0+cpu",
+      "torchvision": "0.23.0+cpu",
+      "timm": "1.0.15",
+      "numpy": "1.26.4",
+      "Pillow": "11.3.0",
+      "ai-edge-litert": "2.1.2"
+    },
+    "mobilevit_s": {
+      "torch": "2.8.0+cpu",
+      "torchvision": "0.23.0+cpu",
+      "timm": "1.0.15",
+      "numpy": "1.26.4",
+      "Pillow": "11.3.0",
+      "ai-edge-litert": "2.1.2"
+    },
+    "resnet50": {
+      "torch": "2.8.0+cpu",
+      "torchvision": "0.23.0+cpu",
+      "timm": "1.0.15",
+      "numpy": "1.26.4",
+      "Pillow": "11.3.0",
+      "ai-edge-litert": "2.1.2"
+    }
+  },
+  "completed_models": {
+    "efficientnet_lite0": {
+      "spec": {
+        "display": "EfficientNet-Lite0",
+        "timm_name": "efficientnet_lite0",
+        "checkpoint": "<RETAINED_RESULTS_ROOT>\\best_fixedsplit_efficientnet_lite0.pth",
+        "checkpoint_sha256": "36f84a1c1eb3957dc2ebbc80676b4eac695827b3f192bc28f1155d8988f8aa1d",
+        "tflite": "<RETAINED_RESULTS_ROOT>\\fixed_DR\\dr_fixed_split_tflite_exports\\tflite\\aptos_fixedsplit_efficientnet_lite0_float32.tflite",
+        "tflite_sha256": "a7b9b3f2aebab0c657753611f2fd711f0d88c28b600a1df433f423a53601165a"
+      },
+      "elapsed_s": 374.1559999999881,
+      "by_dataset": {
+        "APTOS": {
+          "N": 733,
+          "top1_matches": 733,
+          "max_abs_logit_diff": 3.0517578125e-05,
+          "max_abs_prob_diff": 6.361595422277322e-06,
+          "pytorch_retained_top1_matches": 733,
+          "max_abs_prob_diff_pytorch_retained": 4.567976562785958e-06,
+          "decision_matches": {
+            "risk_0.5": 733,
+            "source_sens_90": 733,
+            "source_sens_95": 733,
+            "source_sens_98": 732,
+            "source_sens_99": 733
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 733,
+            "source_sens_90": 732,
+            "source_sens_95": 733,
+            "source_sens_98": 732,
+            "source_sens_99": 732
+          },
+          "mean_abs_logit_diff": 4.511384489103684e-06,
+          "mean_abs_prob_diff": 2.1001680366388795e-07
+        },
+        "MESSIDOR2": {
+          "N": 1744,
+          "top1_matches": 1744,
+          "max_abs_logit_diff": 2.753734588623047e-05,
+          "max_abs_prob_diff": 4.215240390237351e-06,
+          "pytorch_retained_top1_matches": 1744,
+          "max_abs_prob_diff_pytorch_retained": 3.985149146235045e-06,
+          "decision_matches": {
+            "risk_0.5": 1744,
+            "source_sens_90": 1744,
+            "source_sens_95": 1744,
+            "source_sens_98": 1744,
+            "source_sens_99": 1744
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 1744,
+            "source_sens_90": 1744,
+            "source_sens_95": 1744,
+            "source_sens_98": 1744,
+            "source_sens_99": 1744
+          },
+          "mean_abs_logit_diff": 4.1634609085430795e-06,
+          "mean_abs_prob_diff": 1.4694001072210684e-07
+        }
+      },
+      "csv_sha256": "72bec27675d5155c78e8b8a55b8709f818838551b1aed26789a48d3b122483eb",
+      "pytorch_threads": 4,
+      "tflite_threads": 4,
+      "source_status": "<LOCAL_USER>\\Documents\\Codex\\2026-10-06\\academic-research-suite-ars-revision-coach-2\\outputs\\luqing paper\\work\\revision_20261016\\runtime_validation\\full_results\\run_status.json"
+    },
+    "mobilenetv3_large": {
+      "spec": {
+        "display": "MobileNetV3-Large",
+        "timm_name": "mobilenetv3_large_100",
+        "checkpoint": "<RETAINED_RESULTS_ROOT>\\best_fixedsplit_mobilenetv3_large.pth",
+        "checkpoint_sha256": "8d32bde3acda40028abf42624848c1d49016edac4f5cf4cd289737f2e7e46ac4",
+        "tflite": "<RETAINED_RESULTS_ROOT>\\fixed_DR\\dr_fixed_split_tflite_exports\\tflite\\aptos_fixedsplit_mobilenetv3_large_float32.tflite",
+        "tflite_sha256": "4152e3df506aaa0642954dc413f5522819c891a8de6ce4e8e5fa5d713d7534be"
+      },
+      "elapsed_s": 366.68799999999464,
+      "by_dataset": {
+        "APTOS": {
+          "N": 733,
+          "top1_matches": 733,
+          "max_abs_logit_diff": 0.000102996826171875,
+          "max_abs_prob_diff": 6.418981224498577e-06,
+          "pytorch_retained_top1_matches": 733,
+          "max_abs_prob_diff_pytorch_retained": 9.965268544187555e-06,
+          "decision_matches": {
+            "risk_0.5": 733,
+            "source_sens_90": 733,
+            "source_sens_95": 733,
+            "source_sens_98": 733,
+            "source_sens_99": 733
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 733,
+            "source_sens_90": 732,
+            "source_sens_95": 732,
+            "source_sens_98": 733,
+            "source_sens_99": 731
+          },
+          "mean_abs_logit_diff": 8.499016540600203e-06,
+          "mean_abs_prob_diff": 1.51842708750929e-07
+        },
+        "MESSIDOR2": {
+          "N": 1744,
+          "top1_matches": 1744,
+          "max_abs_logit_diff": 8.392333984375e-05,
+          "max_abs_prob_diff": 5.9164220619356556e-06,
+          "pytorch_retained_top1_matches": 1744,
+          "max_abs_prob_diff_pytorch_retained": 4.9401059582510065e-06,
+          "decision_matches": {
+            "risk_0.5": 1744,
+            "source_sens_90": 1744,
+            "source_sens_95": 1744,
+            "source_sens_98": 1744,
+            "source_sens_99": 1744
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 1744,
+            "source_sens_90": 1744,
+            "source_sens_95": 1744,
+            "source_sens_98": 1744,
+            "source_sens_99": 1744
+          },
+          "mean_abs_logit_diff": 6.7037440528836815e-06,
+          "mean_abs_prob_diff": 1.3093965101973358e-07
+        }
+      },
+      "csv_sha256": "419a8862913eb20785fcd72230582406103889ab8d3ada9020781676efb740aa",
+      "pytorch_threads": 2,
+      "tflite_threads": 2,
+      "source_status": "<LOCAL_USER>\\Documents\\Codex\\2026-10-06\\academic-research-suite-ars-revision-coach-2\\outputs\\luqing paper\\work\\revision_20261016\\runtime_validation\\full_results_mobilenetv3_large\\run_status.json"
+    },
+    "mobilevit_s": {
+      "spec": {
+        "display": "MobileViT-S",
+        "timm_name": "mobilevit_s",
+        "checkpoint": "<RETAINED_RESULTS_ROOT>\\best_fixedsplit_mobilevit_s.pth",
+        "checkpoint_sha256": "6728bc9376d0e72bd16ee10f9d24cb1db78a39a21c0b60ea58a77313d983162e",
+        "tflite": "<RETAINED_RESULTS_ROOT>\\fixed_DR\\dr_fixed_split_tflite_exports\\tflite\\aptos_fixedsplit_mobilevit_s_float32.tflite",
+        "tflite_sha256": "30dea6548c863cac423682ecf44893be7b60779268eb42368ab824ad4c9ddf2e"
+      },
+      "elapsed_s": 169.18799999999464,
+      "by_dataset": {
+        "APTOS": {
+          "N": 108,
+          "top1_matches": 108,
+          "max_abs_logit_diff": 7.808208465576172e-06,
+          "max_abs_prob_diff": 2.20776848058879e-06,
+          "pytorch_retained_top1_matches": 108,
+          "max_abs_prob_diff_pytorch_retained": 1.4099904925291007e-06,
+          "decision_matches": {
+            "risk_0.5": 108,
+            "source_sens_90": 108,
+            "source_sens_95": 108,
+            "source_sens_98": 107,
+            "source_sens_99": 108
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 108,
+            "source_sens_90": 108,
+            "source_sens_95": 108,
+            "source_sens_98": 108,
+            "source_sens_99": 108
+          },
+          "mean_abs_logit_diff": 1.51150894385797e-06,
+          "mean_abs_prob_diff": 1.3841216732860027e-07
+        },
+        "MESSIDOR2": {
+          "N": 110,
+          "top1_matches": 110,
+          "max_abs_logit_diff": 7.3909759521484375e-06,
+          "max_abs_prob_diff": 1.6086947656202e-06,
+          "pytorch_retained_top1_matches": 110,
+          "max_abs_prob_diff_pytorch_retained": 1.8673970490490355e-06,
+          "decision_matches": {
+            "risk_0.5": 110,
+            "source_sens_90": 110,
+            "source_sens_95": 110,
+            "source_sens_98": 110,
+            "source_sens_99": 110
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 110,
+            "source_sens_90": 110,
+            "source_sens_95": 110,
+            "source_sens_98": 110,
+            "source_sens_99": 110
+          },
+          "mean_abs_logit_diff": 1.3340264558792115e-06,
+          "mean_abs_prob_diff": 1.459678057160159e-07
+        }
+      },
+      "csv_sha256": "df66b411a2a87f03504b8e06dd764f877e4b2a63b95a3ef72e61830e6a5266e0",
+      "pytorch_threads": 2,
+      "tflite_threads": 2,
+      "source_status": "<LOCAL_USER>\\Documents\\Codex\\2026-10-06\\academic-research-suite-ars-revision-coach-2\\outputs\\luqing paper\\work\\revision_20261016\\runtime_validation\\selected_results_mobilevit_s\\run_status.json"
+    },
+    "resnet50": {
+      "spec": {
+        "display": "ResNet-50",
+        "timm_name": "resnet50",
+        "checkpoint": "<RETAINED_RESULTS_ROOT>\\best_fixedsplit_resnet50.pth",
+        "checkpoint_sha256": "b20926661aeb61b73dd47bb91875bebf0ce2d690a432d1603be9d09d2dd74f3f",
+        "tflite": "<RETAINED_RESULTS_ROOT>\\fixed_DR\\dr_fixed_split_tflite_exports\\tflite\\aptos_fixedsplit_resnet50_float32.tflite",
+        "tflite_sha256": "7433ddb926ef1a8c1e07f2b3f0f072290b6a22d67ac21d234453e167d1c054d6"
+      },
+      "elapsed_s": 102.40600000001723,
+      "by_dataset": {
+        "APTOS": {
+          "N": 108,
+          "top1_matches": 108,
+          "max_abs_logit_diff": 3.24249267578125e-05,
+          "max_abs_prob_diff": 4.220769120377721e-06,
+          "pytorch_retained_top1_matches": 108,
+          "max_abs_prob_diff_pytorch_retained": 5.766953791008778e-06,
+          "decision_matches": {
+            "risk_0.5": 108,
+            "source_sens_90": 108,
+            "source_sens_95": 108,
+            "source_sens_98": 108,
+            "source_sens_99": 108
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 108,
+            "source_sens_90": 107,
+            "source_sens_95": 108,
+            "source_sens_98": 108,
+            "source_sens_99": 108
+          },
+          "mean_abs_logit_diff": 4.309577936375583e-06,
+          "mean_abs_prob_diff": 3.297769887934881e-07
+        },
+        "MESSIDOR2": {
+          "N": 110,
+          "top1_matches": 110,
+          "max_abs_logit_diff": 3.057718276977539e-05,
+          "max_abs_prob_diff": 7.0398996753762155e-06,
+          "pytorch_retained_top1_matches": 110,
+          "max_abs_prob_diff_pytorch_retained": 4.476970685174386e-06,
+          "decision_matches": {
+            "risk_0.5": 110,
+            "source_sens_90": 110,
+            "source_sens_95": 110,
+            "source_sens_98": 110,
+            "source_sens_99": 110
+          },
+          "pytorch_retained_decision_matches": {
+            "risk_0.5": 110,
+            "source_sens_90": 110,
+            "source_sens_95": 110,
+            "source_sens_98": 110,
+            "source_sens_99": 110
+          },
+          "mean_abs_logit_diff": 4.217543385245584e-06,
+          "mean_abs_prob_diff": 3.0171643337657185e-07
+        }
+      },
+      "csv_sha256": "0c1ac868152a87d734c2821bb39f1631c71a477175f03875dd34d09f18364b7a",
+      "pytorch_threads": 2,
+      "tflite_threads": 2,
+      "source_status": "<LOCAL_USER>\\Documents\\Codex\\2026-10-06\\academic-research-suite-ars-revision-coach-2\\outputs\\luqing paper\\work\\revision_20261016\\runtime_validation\\selected_results_resnet50\\run_status.json"
+    }
+  },
+  "thresholds": {
+    "efficientnet_lite0": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.5422741621732711,
+      "source_sens_95": 0.286680217621324,
+      "source_sens_98": 0.07715187933445117,
+      "source_sens_99": 0.0260117471480042
+    },
+    "mobilenetv3_large": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.7014254357563914,
+      "source_sens_95": 0.4053929056390188,
+      "source_sens_98": 0.24814162035181644,
+      "source_sens_99": 0.0727574325792373
+    },
+    "mobilevit_s": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.5398757969960569,
+      "source_sens_95": 0.38024454819969816,
+      "source_sens_98": 0.2537982107605784,
+      "source_sens_99": 0.13782322197221203
+    },
+    "resnet50": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.6041934192180632,
+      "source_sens_95": 0.4620040687732397,
+      "source_sens_98": 0.3251692637859377,
+      "source_sens_99": 0.2814733376726506
+    }
+  },
+  "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894",
+  "canonical_retained_risks_sha256": "318d36ed7670ce8a0b2f5de5cb875a68579db10e8c58d1286c064c87e6471a03",
+  "input_freeze_sha256": "8067881baa2115ae9d906b8ce387044c53bcd2a4c03f73eaeda9133b86cb1940",
+  "completed_utc": "2026-10-16T09:43:06Z",
+  "conversion_decision_flip_records": 2,
+  "rerun_vs_retained_decision_flip_records": 8,
+  "interpretation": "Same decoded retained preprocessed float32 NHWC tensor fed to new PyTorch and final saved float32 TFLite. Probability softmax and referable sum are evaluated in float64 from each runtime float32 logits. Retained CSV decisions use the exact canonical risk CSV and frozen threshold JSON used by statistical tables. CPU/LiteRT rerun is new, not historical Android software. Near-threshold numerical flips are retained with exact scores; no threshold tuning."
+}
