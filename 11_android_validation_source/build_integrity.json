@@ -1,0 +1,114 @@
+{
+  "status": "BUILD_STEPS_COMPLETE_AND_SIGNATURE_VERIFIED",
+  "package": "com.example.aptosedgetest.fidelity20261016",
+  "apk": "[LOCAL_BUILD_WORKSPACE]\\outputs\\luqing paper\\work\\revision_20261016\\manual_android_build\\DR_Fidelity_native_debug_20261016.apk",
+  "apk_sha256": "297adba97c725c397868d49c530c12ca7e3f8bf6e5e6225fb866d50393fbf2ee",
+  "bytes": 40608662,
+  "ABI": [
+    "arm64-v8a"
+  ],
+  "models": {
+    "efficientnet_lite0": {
+      "asset": "aptos_fixedsplit_efficientnet_lite0_float32.tflite",
+      "sha256": "a7b9b3f2aebab0c657753611f2fd711f0d88c28b600a1df433f423a53601165a",
+      "thresholds": {
+        "risk_0.5": 0.5,
+        "source_sens_90": 0.5422741621732711,
+        "source_sens_95": 0.286680217621324,
+        "source_sens_98": 0.07715187933445117,
+        "source_sens_99": 0.0260117471480042
+      },
+      "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894"
+    },
+    "mobilenetv3_large": {
+      "asset": "aptos_fixedsplit_mobilenetv3_large_float32.tflite",
+      "sha256": "4152e3df506aaa0642954dc413f5522819c891a8de6ce4e8e5fa5d713d7534be",
+      "thresholds": {
+        "risk_0.5": 0.5,
+        "source_sens_90": 0.7014254357563914,
+        "source_sens_95": 0.4053929056390188,
+        "source_sens_98": 0.24814162035181644,
+        "source_sens_99": 0.0727574325792373
+      },
+      "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894"
+    }
+  },
+  "input_manifest": "[LOCAL_BUILD_WORKSPACE]\\outputs\\luqing paper\\新增实验材料_20261016\\fidelity_inputs\\manifest.tsv",
+  "original_source_sha256": "c35796b2fcaeed7ba96bcee10cc9aeb53ac651ba868628b13f67aebf299ef4ff",
+  "java_source_sha256": "7d3814646803322f594f65cac7fffe7e6c662dccca86fbbb8daec98f401ca942",
+  "aar_sources": [
+    {
+      "name": "opencv-4.10.0.aar",
+      "source": "\\\\?\\[LOCAL_BUILD_WORKSPACE]\\outputs\\luqing paper\\work\\revision_20261016\\runtime_validation\\gradle_home\\caches\\modules-2\\files-2.1\\org.opencv\\opencv\\4.10.0\\3393650d30a287f171d2a703b656062c1b9a71d1\\opencv-4.10.0.aar",
+      "sha256": "eb2bdae229c761769d459bd42c991bdcecb4da04f7b54dcb2aa9e2cb1dc68ec0"
+    },
+    {
+      "name": "tensorflow-lite-api-2.16.1.aar",
+      "source": "\\\\?\\[LOCAL_BUILD_WORKSPACE]\\outputs\\luqing paper\\work\\revision_20261016\\runtime_validation\\gradle_home\\caches\\modules-2\\files-2.1\\org.tensorflow\\tensorflow-lite-api\\2.16.1\\12775e5f5b11df06890a178993bfab66fae222f7\\tensorflow-lite-api-2.16.1.aar",
+      "sha256": "885b95bc9e47a4aa5cf8e71523aed9b05e397cfef1ea09773f13fea8b649fcee"
+    },
+    {
+      "name": "tensorflow-lite-2.16.1.aar",
+      "source": "\\\\?\\[LOCAL_BUILD_WORKSPACE]\\outputs\\luqing paper\\work\\revision_20261016\\runtime_validation\\gradle_home\\caches\\modules-2\\files-2.1\\org.tensorflow\\tensorflow-lite\\2.16.1\\de6bec83f05a8b68c43333ba30e2aa5a0c728048\\tensorflow-lite-2.16.1.aar",
+      "sha256": "34b065817e294e7dd3569504e8b9454938ceae453b6a459da54d5f6e45d3c94e"
+    }
+  ],
+  "SDK": "[LOCAL_USER]\\AppData\\Local\\Android\\Sdk",
+  "build_tools": "36.0.0",
+  "java": "C:\\Program Files\\Android\\Android Studio\\jbr",
+  "steps": [
+    {
+      "step": "01_javac",
+      "exit_code": 0,
+      "seconds": 1.878
+    },
+    {
+      "step": "02_d8",
+      "exit_code": 0,
+      "seconds": 4.0
+    },
+    {
+      "step": "03_aapt2",
+      "exit_code": 0,
+      "seconds": 2.074
+    },
+    {
+      "step": "04_zipalign",
+      "exit_code": 0,
+      "seconds": 0.162
+    },
+    {
+      "step": "06_apksigner",
+      "exit_code": 0,
+      "seconds": 1.184
+    },
+    {
+      "step": "07_verify_signature",
+      "exit_code": 0,
+      "seconds": 0.621
+    },
+    {
+      "step": "08_dump_badging",
+      "exit_code": 0,
+      "seconds": 0.053
+    }
+  ],
+  "device_run": "Subsequent device execution completed; see actual_device_run. Build-step logs themselves do not assert execution.",
+  "timing": "Diagnostic debug observations only; no new performance claims.",
+  "private_key": "New local debug key remains in build directory only; never include local_debug.keystore in distribution archives.",
+  "record_scope": "Identity of the actual SDK build. Later device execution is recorded separately in actual_device_run and 12_android_fidelity.",
+  "actual_device_run": {
+    "records": "../12_android_fidelity/completed_records",
+    "identity_source": "../12_android_fidelity/completed_records/environment.json",
+    "APK_sha256": "297adba97c725c397868d49c530c12ca7e3f8bf6e5e6225fb866d50393fbf2ee",
+    "model_images": 436,
+    "records_total": 1308,
+    "models": 2,
+    "images_per_model": 218,
+    "arms": 3,
+    "completion_marker": "../12_android_fidelity/completed_records/COMPLETE.txt",
+    "independent_saved_output_check": "PASS",
+    "portable_saved_output_check": "PASS; run ../verify_saved_android.py",
+    "inference_rerun_during_packaging": false
+  }
+}

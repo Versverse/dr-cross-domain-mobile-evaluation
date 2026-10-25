@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.aptosedgetest.fidelity20261016">
+  <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="32"/>
+  <application android:label="DR Fidelity 20261016" android:debuggable="true" android:allowBackup="false" android:extractNativeLibs="true" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+    <activity android:name=".FidelityActivity" android:exported="true" android:screenOrientation="portrait">
+      <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+    </activity>
+  </application>
+</manifest>

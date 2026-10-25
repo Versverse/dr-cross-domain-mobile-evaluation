@@ -1,0 +1,26 @@
+{
+  "efficientnet_lite0": {
+    "asset": "aptos_fixedsplit_efficientnet_lite0_float32.tflite",
+    "sha256": "a7b9b3f2aebab0c657753611f2fd711f0d88c28b600a1df433f423a53601165a",
+    "thresholds": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.5422741621732711,
+      "source_sens_95": 0.286680217621324,
+      "source_sens_98": 0.07715187933445117,
+      "source_sens_99": 0.0260117471480042
+    },
+    "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894"
+  },
+  "mobilenetv3_large": {
+    "asset": "aptos_fixedsplit_mobilenetv3_large_float32.tflite",
+    "sha256": "4152e3df506aaa0642954dc413f5522819c891a8de6ce4e8e5fa5d713d7534be",
+    "thresholds": {
+      "risk_0.5": 0.5,
+      "source_sens_90": 0.7014254357563914,
+      "source_sens_95": 0.4053929056390188,
+      "source_sens_98": 0.24814162035181644,
+      "source_sens_99": 0.0727574325792373
+    },
+    "frozen_thresholds_sha256": "6874b1e08da06cdc12417c974f437be680548a7a4744f80d9b5004732000d894"
+  }
+}
