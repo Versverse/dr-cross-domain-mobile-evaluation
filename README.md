@@ -1,6 +1,6 @@
 # Diabetic retinopathy cross-domain and mobile evaluation
 
-Selected supporting code and numerical records for **Cross-domain evaluation and on-device validation of deep learning models for diabetic retinopathy grading**, by Lu Qing and Khairunnisa Hasikin.
+Selected supporting code and numerical records for **Cross-domain evaluation and on-device validation of deep learning models for diabetic retinopathy grading**, by Lu*.
 
 ## Contents and images
 
